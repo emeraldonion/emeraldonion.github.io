@@ -1,13 +1,9 @@
 ---
 author: emeraldonion
-comments: false
 date: 2017-08-25 07:00:36+00:00
 layout: post
-link: https://emeraldonion.org/dnssec/
-slug: dnssec
 title: DNSSEC is now fully implemented for our forward and reverse lookup zones
-wordpress_id: 359
-categories:
+tags:
 - DNS
 - Education
 - Infrastructure

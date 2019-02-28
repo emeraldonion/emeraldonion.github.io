@@ -1,13 +1,9 @@
 ---
 author: xanaduregio
-comments: false
 date: 2017-08-27 01:44:17+00:00
 layout: post
-link: https://emeraldonion.org/bgp/
-slug: bgp
 title: Emerald Onion's BGP Setup
-wordpress_id: 385
-categories:
+tags:
 - BGP
 - Education
 - Infrastructure

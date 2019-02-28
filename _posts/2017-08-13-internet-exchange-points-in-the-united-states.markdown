@@ -1,13 +1,9 @@
 ---
 author: emeraldonion
-comments: false
 date: 2017-08-13 07:00:46+00:00
 layout: post
-link: https://emeraldonion.org/internet-exchange-points-in-the-united-states/
-slug: internet-exchange-points-in-the-united-states
 title: Internet Exchange Points in the United States
-wordpress_id: 324
-categories:
+tags:
 - Community
 - Education
 - Infrastructure

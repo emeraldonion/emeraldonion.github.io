@@ -1,13 +1,9 @@
 ---
 author: yawnbox@gmail.com
-comments: false
 date: 2018-04-23 12:00:49+00:00
 layout: post
-link: https://emeraldonion.org/tor-as-infrastructure/
-slug: tor-as-infrastructure
 title: 'Tor as infrastructure: challenges and opportunities'
-wordpress_id: 755
-categories:
+tags:
 - Abuse Complaints
 - BGP
 - DNS

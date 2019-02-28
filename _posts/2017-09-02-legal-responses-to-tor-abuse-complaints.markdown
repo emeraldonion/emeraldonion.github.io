@@ -1,13 +1,9 @@
 ---
 author: emeraldonion
-comments: false
 date: 2017-09-02 07:00:04+00:00
 layout: post
-link: https://emeraldonion.org/legal-responses-to-tor-abuse-complaints/
-slug: legal-responses-to-tor-abuse-complaints
 title: Legal Responses to Tor Abuse Complaints
-wordpress_id: 422
-categories:
+tags:
 - Abuse Complaints
 - Education
 - Legal Support

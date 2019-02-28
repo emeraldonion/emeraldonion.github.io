@@ -1,13 +1,9 @@
 ---
 author: emeraldonion
-comments: false
 date: 2018-07-15 07:00:57+00:00
 layout: post
-link: https://emeraldonion.org/arin/
-slug: arin
 title: ARIN - ASN, IPv6, and IPv4 requests
-wordpress_id: 876
-categories:
+tags:
 - ARIN
 - Autonomous System Number (ASN)
 - Internet

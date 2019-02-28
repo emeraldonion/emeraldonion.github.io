@@ -1,13 +1,9 @@
 ---
 author: emeraldonion
-comments: false
 date: 2017-07-08 07:00:13+00:00
 layout: post
-link: https://emeraldonion.org/our-first-campaign-on-teespring/
-slug: our-first-campaign-on-teespring
 title: Our first campaign on Teespring
-wordpress_id: 157
-categories:
+tags:
 - Fundraising
 ---
 

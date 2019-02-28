@@ -1,13 +1,9 @@
 ---
 author: lattera
-comments: false
 date: 2017-10-14 22:55:14+00:00
 layout: post
-link: https://emeraldonion.org/hardenedbsd/
-slug: hardenedbsd
 title: Tor on HardenedBSD
-wordpress_id: 472
-categories:
+tags:
 - HardenedBSD
 - Infrastructure
 - The Tor Project

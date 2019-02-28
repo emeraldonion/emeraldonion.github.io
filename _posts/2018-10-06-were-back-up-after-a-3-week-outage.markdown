@@ -1,13 +1,9 @@
 ---
 author: xanaduregio
-comments: false
 date: 2018-10-06 23:49:34+00:00
 layout: post
-link: https://emeraldonion.org/were-back-up-after-a-3-week-outage/
-slug: were-back-up-after-a-3-week-outage
 title: We're back up after a 3 week outage
-wordpress_id: 901
-categories:
+tags:
 - BGP
 - DNS
 - Infrastructure

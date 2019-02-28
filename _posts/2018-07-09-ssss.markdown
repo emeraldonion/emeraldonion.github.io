@@ -1,13 +1,9 @@
 ---
 author: yawnbox@gmail.com
-comments: false
 date: 2018-07-09 12:00:06+00:00
 layout: post
-link: https://emeraldonion.org/ssss/
-slug: ssss
 title: My SSSS experience
-wordpress_id: 683
-categories:
+tags:
 - Awareness
 - Government Surveillance
 ---

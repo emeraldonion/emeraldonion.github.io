@@ -1,13 +1,9 @@
 ---
 author: xanaduregio
-comments: false
 date: 2017-12-03 00:15:55+00:00
 layout: post
-link: https://emeraldonion.org/dns-for-tor/
-slug: dns-for-tor
 title: DNS for Tor Exit Relaying
-wordpress_id: 537
-categories:
+tags:
 - DNS
 - Education
 - Infrastructure

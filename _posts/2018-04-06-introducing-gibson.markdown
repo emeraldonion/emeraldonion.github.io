@@ -1,13 +1,9 @@
 ---
 author: undervillain
-comments: false
 date: 2018-04-06 10:20:20+00:00
 layout: post
-link: https://emeraldonion.org/introducing-gibson/
-slug: introducing-gibson
 title: Introducing gibson
-wordpress_id: 730
-categories:
+tags:
 - Community
 - Education
 - HardenedBSD

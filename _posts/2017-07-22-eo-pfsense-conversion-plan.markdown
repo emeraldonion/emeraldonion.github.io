@@ -1,12 +1,8 @@
 ---
 author: xanaduregio
-comments: false
 date: 2017-07-22 21:31:30+00:00
 layout: post
-link: https://emeraldonion.org/eo-pfsense-conversion-plan/
-slug: eo-pfsense-conversion-plan
 title: EO pfSense Conversion plan
-wordpress_id: 212
 ---
 
 Currently pfSense is setup in a traditional 1 route (Default Gateway) configuration that you might find in a small business or home. Meaning it has a WAN port and a LAN port. The WAN port is currently set to have a default route of the upstream ISP provider.

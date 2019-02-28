@@ -1,13 +1,9 @@
 ---
 author: xanaduregio
-comments: false
 date: 2018-06-30 07:00:52+00:00
 layout: post
-link: https://emeraldonion.org/edge-routing-with-hardenedbsd/
-slug: edge-routing-with-hardenedbsd
 title: Edge routing with HardenedBSD
-wordpress_id: 810
-categories:
+tags:
 - BGP
 - DNS
 - HardenedBSD

@@ -1,13 +1,9 @@
 ---
 author: xanaduregio
-comments: false
 date: 2017-08-02 06:22:23+00:00
 layout: post
-link: https://emeraldonion.org/were-back-after-a-6-5-day-outage/
-slug: were-back-after-a-6-5-day-outage
 title: We're back after a 6.5 day outage
-wordpress_id: 262
-categories:
+tags:
 - Infrastructure
 ---
 

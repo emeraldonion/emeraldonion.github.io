@@ -1,13 +1,9 @@
 ---
 author: emeraldonion
-comments: false
 date: 2017-10-19 07:00:24+00:00
 layout: post
-link: https://emeraldonion.org/otf-concept-note/
-slug: otf-concept-note
 title: OTF Concept Note
-wordpress_id: 526
-categories:
+tags:
 - Community
 - Infrastructure
 - The Tor Project

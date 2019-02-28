@@ -1,13 +1,9 @@
 ---
 author: emeraldonion
-comments: false
 date: 2017-07-02 07:00:58+00:00
 layout: post
-link: https://emeraldonion.org/tor-router-configuration-v1/
-slug: tor-router-configuration-v1
 title: Tor router configuration v1
-wordpress_id: 100
-categories:
+tags:
 - Infrastructure
 ---
 

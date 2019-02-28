@@ -1,13 +1,9 @@
 ---
 author: xanaduregio
-comments: false
 date: 2017-12-24 05:37:59+00:00
 layout: post
-link: https://emeraldonion.org/articles/
-slug: articles
 title: Emerald Onion's Articles of Incorporation
-wordpress_id: 668
-categories:
+tags:
 - Corporate
 - Education
 - Organizational Management
