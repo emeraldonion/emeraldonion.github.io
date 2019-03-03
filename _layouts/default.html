@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+</head>
+<body>
+    <header class="main-header">
+        <a href="https://emeraldonion.org/" rel="home" itemprop="url"><img width="250" height="250" src="https://emeraldonion.org/wp-content/uploads/2017/06/cropped-Emerald-Onion-v6-250px-transparent.png" class="logo" alt="Emerald Onion" itemprop="logo" srcset="https://emeraldonion.org/wp-content/uploads/2017/06/cropped-Emerald-Onion-v6-250px-transparent.png 250w, https://emeraldonion.org/wp-content/uploads/2017/06/cropped-Emerald-Onion-v6-250px-transparent.png 150w, https://emeraldonion.org/wp-content/uploads/2017/06/cropped-Emerald-Onion-v6-250px-transparent.png 100w" sizes="100vw" /></a>
+        <section class="header-info">
+            <h1 class="site-title"><a href="https://emeraldonion.org/" rel="home">Emerald Onion</a></h1>
+            <h1 class="hide-when-large"><a href="https://emeraldonion.org/" rel="home">Emerald Onion</a></h1>
+		    <p class="site-description">501(c)(3) nonprofit supporting privacy infrastructure</p>
+		</section>
+		<section class="nav-header">
+            <input id="toggle" type="checkbox">
+            <label class="toggle-container" for="toggle">
+              <span class="button button-toggle"></span>
+            </label>
+            <nav id="top-nav" class="top-nav nav">
+                <li id="nav-1" class="menu-item nav-item nav-1"><a href="/about/">About</a></li>
+                <li id="nav-2" class="menu-item nav-item nav-2"><a href="/faq/">Legal FAQ</a></li>
+                <li id="nav-3" class="menu-item nav-item nav-3"><a href="/development/">Development</a></li>
+                <li id="nav-4" class="menu-item nav-item nav-4"><a href="/transparency/">Transparency</a></li>
+                <li id="nav-5" class="menu-item nav-item nav-5"><a href="/publications/">Publications</a></li>
+                <li id="nav-6" class="menu-item nav-item nav-6"><a href="/donate/">Donate</a></li>
+                <li id="nav-7" class="menu-item nav-item nav-7"><a href="/peering/">Peering</a></li>
+            </nav>
+        </section>
+    </header>
+    <main class="main-content">
+        <h1>
+            {{ page.title }}
+        </h1>
+        {{ content }}
+    </main>
+    <footer>
+        <address>
+            <p>Address:</p>
+            <p>Emerald Onion</p>
+            <p>815 1st Ave # 331</p>
+            <p>Seattle, WA 98104</p>
+        </address>
+        <section class="as">
+            <p>ARIN WHOIS</p>
+            <a href="https://whois.arin.net/rest/asn/AS396507.html" target="_blank">AS 396507</a>
+        </section>
+    </footer>
+</body>
+</html>

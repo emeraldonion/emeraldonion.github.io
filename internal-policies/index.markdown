@@ -2,7 +2,7 @@
 author: xanaduregio
 comments: false
 date: 2017-12-21 05:38:23+00:00
-layout: page
+layout: default
 link: https://emeraldonion.org/internal-policies/
 published: false
 slug: internal-policies

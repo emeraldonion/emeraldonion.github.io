@@ -2,7 +2,7 @@
 author: xanaduregio
 comments: false
 date: 2017-07-22 19:03:34+00:00
-layout: page
+layout: default
 link: https://emeraldonion.org/proposed-projects/
 published: false
 slug: proposed-projects

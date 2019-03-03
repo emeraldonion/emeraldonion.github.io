@@ -2,7 +2,7 @@
 author: emeraldonion
 comments: false
 date: 2017-06-20 07:00:09+00:00
-layout: page
+layout: default
 link: https://emeraldonion.org/faq/
 slug: faq
 title: Legal FAQ

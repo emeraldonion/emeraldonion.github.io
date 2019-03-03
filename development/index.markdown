@@ -2,7 +2,7 @@
 author: emeraldonion
 comments: false
 date: 2017-07-02 07:00:39+00:00
-layout: page
+layout: default
 link: https://emeraldonion.org/development/
 slug: development
 title: Development

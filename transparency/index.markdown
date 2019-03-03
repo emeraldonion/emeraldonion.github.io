@@ -2,7 +2,7 @@
 author: emeraldonion
 comments: false
 date: 2018-03-26 13:30:01+00:00
-layout: page
+layout: default
 link: https://emeraldonion.org/transparency/
 slug: transparency
 title: Transparency

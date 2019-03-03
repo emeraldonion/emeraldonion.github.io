@@ -2,7 +2,7 @@
 author: emeraldonion
 comments: false
 date: 2017-06-20 07:00:51+00:00
-layout: page
+layout: default
 link: https://emeraldonion.org/about/
 slug: about
 title: About

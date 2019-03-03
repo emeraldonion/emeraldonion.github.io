@@ -2,7 +2,7 @@
 author: xanaduregio
 comments: false
 date: 2017-08-06 22:02:11+00:00
-layout: page
+layout: default
 link: https://emeraldonion.org/peering/
 slug: peering
 title: Peering
