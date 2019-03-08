@@ -29,7 +29,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   1. Select Install:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/001-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/001.png)
+    1. [![](/images/001-300x225.png)](/images/001.png)
 
 
 
@@ -38,7 +38,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   2. Select your keymap. If you use a standard US English keyboard, the default is fine:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/002-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/002.png)
+    1. [![](/images/002-300x225.png)](/images/002.png)
 
 
 
@@ -47,7 +47,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   3. Choose a hostname:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/003-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/003.png)
+    1. [![](/images/003-300x225.png)](/images/003.png)
 
 
 
@@ -56,7 +56,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   4. Select the distribution sets to install:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/004-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/004.png)
+    1. [![](/images/004-300x225.png)](/images/004.png)
 
 
 
@@ -65,7 +65,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   5. Choose your filesystem. For purposes of this article, we'll use ZFS for full-disk encryption:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/005-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/005.png)
+    1. [![](/images/005-300x225.png)](/images/005.png)
 
 
 
@@ -74,7 +74,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   6. Selecting the Pool Type will allow you to configure your ZFS pool the way you want. We will just use a single disk in this article:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/006-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/006.png)
+    1. [![](/images/006-300x225.png)](/images/006.png)
 
 
 
@@ -83,7 +83,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   7. Since we're using a single disk, we'll select the Stripe option:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/007-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/007.png)
+    1. [![](/images/007-300x225.png)](/images/007.png)
 
 
 
@@ -92,7 +92,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   8. Select the disks to use in the pool. Only a single disk for us:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/008-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/008.png)
+    1. [![](/images/008-300x225.png)](/images/008.png)
 
 
 
@@ -101,7 +101,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   9. After selecting the disks, you'll go back to the original ZFS setup menu. We've made a few changes (Encrypt Disks, Swap Size, Encrypt Swap):
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/009-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/009.png)
+    1. [![](/images/009-300x225.png)](/images/009.png)
 
 
 
@@ -110,7 +110,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   10. Review the changes:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/010-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/010.png)
+    1. [![](/images/010-300x225.png)](/images/010.png)
 
 
 
@@ -119,7 +119,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   11. Set the password on your encrypted ZFS pool:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/011-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/011.png)
+    1. [![](/images/011-300x225.png)](/images/011.png)
 
 
 
@@ -128,7 +128,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   12. Validate the password:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/012-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/012.png)
+    1. [![](/images/012-300x225.png)](/images/012.png)
 
 
 
@@ -137,7 +137,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   13. Encrypted ZFS will initialize itself:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/013-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/013.png)
+    1. [![](/images/013-300x225.png)](/images/013.png)
 
 
 
@@ -146,7 +146,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   14. HardenedBSD will now install distribution sets:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/014-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/014.png)
+    1. [![](/images/014-300x225.png)](/images/014.png)
 
 
 
@@ -155,7 +155,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   15. Set the root password:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/015-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/015.png)
+    1. [![](/images/015-300x225.png)](/images/015.png)
 
 
 
@@ -164,7 +164,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   16. If you want to set up networking, select the network device to configure. In this article, we'll set up a dynamic (DHCP) network configuration:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/016-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/016.png)
+    1. [![](/images/016-300x225.png)](/images/016.png)
 
 
 
@@ -173,7 +173,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   17. We want to use IPv4:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/017-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/017.png)
+    1. [![](/images/017-300x225.png)](/images/017.png)
 
 
 
@@ -182,7 +182,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   18. We want to use DHCP:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/018-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/018.png)
+    1. [![](/images/018-300x225.png)](/images/018.png)
 
 
 
@@ -191,7 +191,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   19. It will try to acquire a DHCP lease:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/019-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/019.png)
+    1. [![](/images/019-300x225.png)](/images/019.png)
 
 
 
@@ -200,7 +200,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   20. At Emerald Onion, we put IPv6 first. However, in this example article, we won't use IPv6 as it's not currently available. So we'll choose no when prompted to set up IPv6:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/020-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/020.png)
+    1. [![](/images/020-300x225.png)](/images/020.png)
 
 
 
@@ -209,7 +209,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   21. Ensure the DNS information is correct and make any changes if needed:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/021-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/021.png)
+    1. [![](/images/021-300x225.png)](/images/021.png)
 
 
 
@@ -218,7 +218,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   22. It's now time to choose the system timezone. Select the region:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/022-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/022.png)
+    1. [![](/images/022-300x225.png)](/images/022.png)
 
 
 
@@ -227,7 +227,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   23. We chose America. We'll choose United States for the country next:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/024-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/024.png)
+    1. [![](/images/024-300x225.png)](/images/024.png)
 
 
 
@@ -236,7 +236,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   24. Finally we'll chose the actual timezone:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/025-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/025.png)
+    1. [![](/images/025-300x225.png)](/images/025.png)
 
 
 
@@ -245,7 +245,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   25. Confirm the timezone:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/026-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/026.png)
+    1. [![](/images/026-300x225.png)](/images/026.png)
 
 
 
@@ -254,7 +254,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   26. Because we use NTP, we'll skip setting the date:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/027-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/027.png)
+    1. [![](/images/027-300x225.png)](/images/027.png)
 
 
 
@@ -263,7 +263,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   27. We'll also skip setting the time:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/028-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/028.png)
+    1. [![](/images/028-300x225.png)](/images/028.png)
 
 
 
@@ -272,7 +272,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   28. Select the services to start at boot:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/029-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/029.png)
+    1. [![](/images/029-300x225.png)](/images/029.png)
 
 
 
@@ -281,7 +281,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   29. Select the system hardening options. HardenedBSD sets options one through five by default, so there's no need to set them here.
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/030-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/030.png)
+    1. [![](/images/030-300x225.png)](/images/030.png)
 
 
 
@@ -290,7 +290,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   30. We will go ahead and add an unprivileged user. Make sure to add the user to the "wheel" group for access to use the su program:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/032-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/032.png)
+    1. [![](/images/032-300x225.png)](/images/032.png)
 
 
 
@@ -299,7 +299,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   31. Set the user's details:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/033-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/033.png)
+    1. [![](/images/033-300x225.png)](/images/033.png)
 
 
 
@@ -308,7 +308,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   32. HardenedBSD is now installed! Exit the installer. The installer will do things in the background so there may be some delay between exiting and the next prompt:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/034-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/034.png)
+    1. [![](/images/034-300x225.png)](/images/034.png)
 
 
 
@@ -317,7 +317,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   33. We don't want to make further modifications to the installation prior to rebooting:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/035-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/035.png)
+    1. [![](/images/035-300x225.png)](/images/035.png)
 
 
 
@@ -326,7 +326,7 @@ Installing HardenedBSD is simple. Follow the prompts. Sample screenshots are pro
   34. Go ahead and reboot:
 
  	
-    1. [![](https://emeraldonion.org/wp-content/uploads/2017/10/036-300x225.png)](https://emeraldonion.org/wp-content/uploads/2017/10/036.png)
+    1. [![](/images/036-300x225.png)](/images/036.png)
 
 
 

@@ -12,19 +12,19 @@ tags:
 
 Last month (July 2017) we moved our DNS zone management to the Google Cloud Platform since our domains were already registered with Google. After applying for the DNSSEC alpha, we were granted access and turned on DNSSEC for all three of our forward ([domain](http://dnssec-debugger.verisignlabs.com/emeraldonion.org)) and reverse ([IPv6](http://dnssec-debugger.verisignlabs.com/0.c.8.1.0.0.2.6.2.ip6.arpa) and [IPv4](http://dnssec-debugger.verisignlabs.com/64.129.23.in-addr.arpa) scopes) lookup zones. Google's alpha products come with no SLA, so we took a risk implementing DNSSEC through Google.
 
-[![](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-zones.png)](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-zones.png)
+[![](/images/eo-gcp-dns-zones.png)](/images/eo-gcp-dns-zones.png)
 
 Turning on DNSSEC was as easy flipping a switch in the control panel. The last part is adding the DS entries at the Registrar.
 
-[![](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-zone-detail.png)](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-zone-detail.png)
+[![](/images/eo-gcp-dns-zone-detail.png)](/images/eo-gcp-dns-zone-detail.png)
 
 In the upper-right hand corner of Zone Details is Registrar Setup. This is where we got our DS entry information.
 
-[![](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-registrar-setup.png)](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-registrar-setup.png)
+[![](/images/eo-gcp-dns-registrar-setup.png)](/images/eo-gcp-dns-registrar-setup.png)
 
 This DS information translates to a specific Key Tag, Algorithm, Digest Type, and Digest that needs to go into Google Domains (the actual Registrar).
 
-[![](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-registrar-ds-config.png)](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-registrar-ds-config.png)
+[![](/images/eo-gcp-dns-registrar-ds-config.png)](/images/eo-gcp-dns-registrar-ds-config.png)
 
 This completed the domain setup. Now we needed to configure DNSSEC for our reverse lookup zones. Because they are direct allocations from ARIN, we needed to copy over the DS details over to ARIN.
 
@@ -36,7 +36,7 @@ String (for our IPv6) parsed:
     3600 DS 46756 8 2 5396635C919BAF34F24011FAB2DE251630AE2B8C17F1B69D05BCFDD603510014
 
 
-[![](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-arin-v6-ds-config.png)](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-arin-v6-ds-config.png)
+[![](/images/eo-gcp-dns-arin-v6-ds-config.png)](/images/eo-gcp-dns-arin-v6-ds-config.png)
 
 String (for our IPv4) parsed:
 
@@ -44,7 +44,7 @@ String (for our IPv4) parsed:
     3600 DS 40286 8 2 54686118794BD67CC76295F3D7F1C269D70EB5646F5DA130CC590AE14B33935F
 
 
-[![](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-arin-v4-ds-config.png)](https://emeraldonion.org/wp-content/uploads/2017/08/eo-gcp-dns-arin-v4-ds-config.png)
+[![](/images/eo-gcp-dns-arin-v4-ds-config.png)](/images/eo-gcp-dns-arin-v4-ds-config.png)
 
 This completed the ARIN DNSSEC configuration. While Google provided a quick DNS update for validation, ARIN took over 12 hours.
 

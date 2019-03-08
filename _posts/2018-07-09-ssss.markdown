@@ -12,7 +12,7 @@ On 2018-January-04, following a week of security and privacy events in Germany, 
 
 Upon getting to Berlin Schönefeld Airport (SXF), I checked in by visiting the Norwegian airline ticket counter. As expected, I received two tickets, one for my layover trip from Berlin (SXF) to Oslo (OSL), and another ticket for my flight from Oslo (OSL) to New York (JFK). On my ticket from Oslo to New York, I promptly noticed the “SSSS” in large, capital letters.
 
-[caption id="attachment_685" align="aligncenter" width="525"][![Secondary Security Screening Selection](https://emeraldonion.org/wp-content/uploads/2018/01/norwegian-ssss-1024x513.jpg)](https://emeraldonion.org/wp-content/uploads/2018/01/norwegian-ssss.jpg) Secondary Security Screening Selection (SSSS)[/caption]
+[caption id="attachment_685" align="aligncenter" width="525"][![Secondary Security Screening Selection](/images/norwegian-ssss-1024x513.jpg)](/images/norwegian-ssss.jpg) Secondary Security Screening Selection (SSSS)[/caption]
 
 
 

@@ -66,7 +66,7 @@ Of the other custom options, the bulk are related to DNSSEC security.
 
 
 
-[![](https://emeraldonion.org/wp-content/uploads/2017/10/general.jpg)](https://emeraldonion.org/wp-content/uploads/2017/10/general.jpg)
+[![](/images/general.jpg)](/images/general.jpg)
 
 
 ## Advanced Settings:
@@ -102,7 +102,7 @@ Of the other custom options, the bulk are related to DNSSEC security.
 
 Hiding the identity and version helps prevent the leakage of information that could be used in attacks against us. Prefetch Support changes how the DNS server fetches DNS records. Without it, it fetches the DNS record at the time of the request. With Prefetch Support, it refreshes the DNS entries as each record's TTL expires helping to further obfuscate requests and makes it harder for specific Tor request correlation attacks.
 
-![](https://emeraldonion.org/wp-content/uploads/2017/12/screencapture-23-129-64-2-services_unbound_advanced-php-1513541167725.png)
+![](/images/screencapture-23-129-64-2-services_unbound_advanced-php-1513541167725.png)
 
 
 ## Access Lists:

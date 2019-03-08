@@ -10,7 +10,7 @@ tags:
 - Infrastructure
 ---
 
-[caption id="attachment_745" align="aligncenter" width="1600"]![](https://emeraldonion.org/wp-content/uploads/2018/04/Outline-Long.jpg) Artwork by Mike Finch (CC BY 4.0)[/caption]
+[caption id="attachment_745" align="aligncenter" width="1600"]![](/images/Outline-Long.jpg) Artwork by Mike Finch (CC BY 4.0)[/caption]
 
 
 
@@ -148,6 +148,6 @@ gibson is always written in all-lowercase.
 
 The gibson logo was generously donated by [Mike Finch](https://twitter.com/mkfnch) and is licensed by Emerald Onion as [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
-[![](https://emeraldonion.org/wp-content/uploads/2018/04/Outline-Short-300x300.jpg)](https://emeraldonion.org/wp-content/uploads/2018/04/Outline-Short.jpg)
+[![](/images/Outline-Short-300x300.jpg)](/images/Outline-Short.jpg)
 
-[![](https://emeraldonion.org/wp-content/uploads/2018/04/Outline-Long-300x98.jpg)](https://emeraldonion.org/wp-content/uploads/2018/04/Outline-Long.jpg)
+[![](/images/Outline-Long-300x98.jpg)](/images/Outline-Long.jpg)

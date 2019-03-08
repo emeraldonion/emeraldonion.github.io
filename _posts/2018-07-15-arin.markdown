@@ -12,16 +12,16 @@ tags:
 # ASN Request
 
 
-[![](https://emeraldonion.org/wp-content/uploads/2018/07/ARIN-ASN-Request-150x150.png)](https://emeraldonion.org/wp-content/uploads/2018/07/ARIN-ASN-Request.png)
+[![](/images/ARIN-ASN-Request-150x150.png)](/images/ARIN-ASN-Request.png)
 
 
 # IPv6 Request
 
 
-[![](https://emeraldonion.org/wp-content/uploads/2018/07/ARIN-IPv6-request-150x150.png)](https://emeraldonion.org/wp-content/uploads/2018/07/ARIN-IPv6-request.png)
+[![](/images/ARIN-IPv6-request-150x150.png)](/images/ARIN-IPv6-request.png)
 
 
 # IPv4 Request
 
 
-[![](https://emeraldonion.org/wp-content/uploads/2018/07/ARIN-IPv4-Request-150x150.png)](https://emeraldonion.org/wp-content/uploads/2018/07/ARIN-IPv4-Request.png)
+[![](/images/ARIN-IPv4-Request-150x150.png)](/images/ARIN-IPv4-Request.png)

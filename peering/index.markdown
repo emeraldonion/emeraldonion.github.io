@@ -50,6 +50,6 @@ Currently 1 v4, 1 v6
 
 Our traffic profile is 1:1 or symmetrical.
 
-[![](https://emeraldonion.org/wp-content/uploads/2017/09/trafficprofile.png)](https://emeraldonion.org/wp-content/uploads/2017/09/trafficprofile.png)
+[![](/images/trafficprofile.png)](/images/trafficprofile.png)
 
 Last Updated: 9/3/2017
