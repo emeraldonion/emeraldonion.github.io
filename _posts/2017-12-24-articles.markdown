@@ -9,124 +9,120 @@ tags:
 - Organizational Management
 ---
 
-The following is the text of the Articles of Incorporation for Emerald Onion that were filed with the Secretary of State for Washington State. We filed this with the state and verified it was received and accepted before filing IRS Form 1023-EZ.
+The following is the text of the Articles of Incorporation for Emerald Onion that were filed with the Secretary of State for Washington State. We filed this with the state and verified it was received and accepted before filing IRS Form 1023-EZ.
 
 [Here is a link to the word document used to create it.](https://emeraldonion.org/wp-content/uploads/2017/12/Articles-Of-Incorporation-Version-1.4.docx)
 
-
 # Nonprofit Corporation Articles of Incorporation of Emerald Onion
-
 
 Pursuant to RCW 23B.02.020 of the Washington Business Corporation Act, the undersigned does hereby submit these Articles of Incorporation for the purpose of forming a nonprofit corporation.
 
-
 ## Article 1: Name
-
 
 The name of the corporation is Emerald Onion.
 
-
 ## Article 2: Effective Date
-
 
 The effective date of incorporation shall be 6/15/2017.
 
-
 ## Article 3: Existence
-
 
 The corporation shall have perpetual existence.
 
-
 ## Article 4: Purpose
-
 
 The purpose of the corporation is to promote and support online anonymity and privacy. Towards this purpose, the corporation shall engage in charitable, educational, and scientific purposes, including the making of distributions to organizations that qualify as exempt organizations under section 501(c)(3) of the Internal Revenue Code, or the corresponding section of any future federal tax code.
 
 No part of the net earnings of the corporation shall inure to the benefit of, or be distributable to its members, trustees, officers, or other private persons, except that the corporation shall be authorized and empowered to pay reasonable compensation for services rendered and to make payments and distributions in furtherance of the purposes described in section 501(c)(3). No substantial part of the activities of the corporation shall be the carrying on of propaganda, or otherwise attempting to influence legislation, and the corporation shall not participate in, or intervene in (including the publishing or distribution of statements) any political campaign on behalf of or in opposition to any candidate for public office. Notwithstanding any other provision of these articles, the corporation shall not carry on any other activities not permitted to be carried on (a) by a corporation exempt from federal income tax under section 501(c)(3) of the Internal Revenue Code, or the corresponding section of any future federal tax code, or (b) by a corporation, contributions to which are deductible under section 170(c)(2) of the Internal Revenue Code, or the corresponding section of any future federal tax code.
 
-
 ## Article 5: Distributions Upon Dissolution
-
 
 Upon termination or dissolution of the corporation, any assets lawfully available for distribution shall be distributed to one or more qualifying organizations described in Section 501(c)(3) of the Internal Revenue Code, or the corresponding section of any future federal tax code, which have a charitable purpose which, at least generally, includes a purpose similar to the terminating or dissolving corporation.
 
-
 ## Article 6: Initial Board of Directors
-
 
 The corporation’s initial directors are as follows:
 
+<address>
 Christopher Sheats
 815 1st Ave # 331
 Seattle, WA 98104-1404
+</address>
 
+<address>
 Christian Severt
 815 1st Ave # 331
 Seattle, WA 98104-1404
+</address>
 
+<address>
 William Scott
 815 1st Ave # 331
 Seattle, WA 98104-1404
-
+</address>
 
 ## Article 7: Registered Agent and Office
 
-
 The street address of the Registered Agent of the corporation is:
 
+<address>
 Registered Agent Solutions Inc
 3400 Capitol Blvd SE Ste 101
 Tumwater, WA 98501-3351
+</address>
 
 Registered agent mailing address:
 
+<address>
 Registered Agent Solutions Inc
 PO Box 1368
 Olympia, WA 98507-1368
-
+</address>
 
 ## Article 8: Principal Office
 
-
 The corporation has a principal office. The street address of the principal office is:
 
+<address>
 815 1st Ave # 331
 Seattle, WA 98104-1404
-
+</address>
 
 ## Article 9: Mailing Address
 
-
+<address>
 815 1st Ave # 331
 Seattle, WA 98104-1404
-
+</address>
 
 ## Article 10: Indemnification
 
-
 The corporation does indemnify any directors, officers, employees, incorporators, and members of the corporation from any liability regarding the corporation and the affairs of the corporation, unless the person fraudulently and intentionally violated the law and/or maliciously conducted acts to damage and/or defraud the corporation, or as otherwise provided under applicable statute.
-
 
 ## Article 11: Incorporators
 
-
 The names and addresses of the Incorporators are:
 
+<address>
 Christopher Sheats
 815 1st Ave # 331
 Seattle, WA 98104-1404
+</address>
 
+<address>
 Christian Severt
 815 1st Ave # 331
 Seattle, WA 98104-1404
+</address>
 
+<address>
 William Scott
 815 1st Ave # 331
 Seattle, WA 98104-1404
+</address>
 
+<address>
 Matthew McCoy, J.D.
 815 1st Ave # 331
 Seattle, WA 98104-1404
-
-
+</address>

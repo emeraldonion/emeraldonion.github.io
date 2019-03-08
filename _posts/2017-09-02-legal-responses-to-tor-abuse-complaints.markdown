@@ -24,66 +24,55 @@ The other way that abuse complaints can come in is directly from third-parties, 
 
 We encourage other Tor operators to replicate our work so that they can directly manage all abuse complaints. Doing so removes a tremendous amount of legal stress from upstream providers. When this is applicable to you, use the "Direct Complaint" document below.
 
-Please also thank [EFF and The Tor Project](https://www.torproject.org/eff/tor-dmca-response.html.en) for their prior work in this area.
-
+Please also thank [EFF and The Tor Project](https://www.torproject.org/eff/tor-dmca-response.html.en) for their prior work in this area.
 
 # Complaint Forwarded By Your ISP(s)
 
+> I am writing on behalf of [Your Organization] in response to the notice copyright below.
 
+> [Your Organization] is a [Your State] State-based nonprofit corporation and encrypted transit internet service provider. I would like to assure you that [Your Organization] is neither infringing copyrights nor hosting the claimed infringing materials on behalf of users. The notice is likely based upon misunderstandings about the law and about some of the software we run.
 
+> As an initial matter, the faulty copyright notice was triggered by a routing program that we are running on our servers called Tor. The Tor network is a group of volunteer-operated routers on the Internet that helps people enhance their security, privacy, and safety. [Your Organization] only runs Tor traffic through our routers.
 
-<blockquote>I am writing on behalf of [Your Organization] in response to the notice copyright below.
+> Tor bounces communications through routers on the network before sending those packets on to their final destinations. However, Tor tunnels the connections so that no router can learn both the source and destination of the packets, which protects users from nefarious snooping on network traffic. The result is that the final IP address that the recipient receives is not the IP address of the sender.
 
-[Your Organization] is a [Your State] State-based nonprofit corporation and encrypted transit internet service provider. I would like to assure you that [Your Organization] is neither infringing copyrights nor hosting the claimed infringing materials on behalf of users. The notice is likely based upon misunderstandings about the law and about some of the software we run.
+> Tor is valuable because it promotes privacy and free expression around the world. It also protects users against hazards such as harassment, spam, identity theft, price discrimination, and even dissident surveillance by oppressive governments. To learn more about Tor, see [https://www.torproject.org/](https://www.torproject.org/).
 
-As an initial matter, the faulty copyright notice was triggered by a routing program that we are running on our servers called Tor. The Tor network is a group of volunteer-operated routers on the Internet that helps people enhance their security, privacy, and safety. [Your Organization] only runs Tor traffic through our routers.
+> [Your Organization] operates Tor exit routers with connectivity to the [Your Internet Exchange Point(s)]. Those routers are only a conduit of online traffic. We are thus protected by the Digital Millennium Copyright Act safe harbor provision of 512(a). That safe harbor also likely protects you, as our ISP, from liability arising from this complaint.
 
-Tor bounces communications through routers on the network before sending those packets on to their final destinations. However, Tor tunnels the connections so that no router can learn both the source and destination of the packets, which protects users from nefarious snooping on network traffic. The result is that the final IP address that the recipient receives is not the IP address of the sender.
+> The DMCA creates four “safe harbors” that protect service providers from copyright liability for the acts of their users, provided that the ISPs fulfill certain requirements. 17 U.S.C. § 512. The DMCA’s requirements vary depending on the ISP’s role. You may be familiar with the “notice and takedown” provisions of section 512(c) of the DMCA, which applies to ISPs hosting content on behalf of users. However, those requirements do not apply when an ISP merely serves as a “conduit,” _i.e._, transmits, routes, or provides for connections through a system or network. The safe harbor of section 512(a) has different and less burdensome eligibility requirements for conduits. _See_ _Recording Indus. Ass’n of Am., Inc. v. Verizon Internet Servs_., Inc., 351 F.3d 1229 (D.C. Cir. 2003); _In re Charter Commc'ns, Inc_., _Subpoena Enforcement Matter_, 393 F.3d 771 (8th Cir. 2005).
 
-Tor is valuable because it promotes privacy and free expression around the world. It also protects users against hazards such as harassment, spam, identity theft, price discrimination, and even dissident surveillance by oppressive governments. To learn more about Tor, see [https://www.torproject.org/](https://www.torproject.org/).
+> Under section 512(a), service providers like you are typically protected from damages for copyright infringement claims if you also maintain “a policy that provides for termination in appropriate circumstances of subscribers and account holders of the service provider’s system or network who are repeat infringers.” If you have and implement such a policy, and you otherwise qualify for the safe harbor, you should be free from fear of copyright damages.
 
-[Your Organization] operates Tor exit routers with connectivity to the [Your Internet Exchange Point(s)]. Those routers are only a conduit of online traffic. We are thus protected by the Digital Millennium Copyright Act safe harbor provision of 512(a). That safe harbor also likely protects you, as our ISP, from liability arising from this complaint.
+> As an organization committed to protecting the privacy of its customers, I hope you’ll agree that Tor is a valuable technology and will continue to support our effort to strengthen the Tor network.
 
-The DMCA creates four “safe harbors” that protect service providers from copyright liability for the acts of their users, provided that the ISPs fulfill certain requirements. 17 U.S.C. § 512. The DMCA’s requirements vary depending on the ISP’s role. You may be familiar with the “notice and takedown” provisions of section 512(c) of the DMCA, which applies to ISPs hosting content on behalf of users. However, those requirements do not apply when an ISP merely serves as a “conduit,” _i.e._, transmits, routes, or provides for connections through a system or network. The safe harbor of section 512(a) has different and less burdensome eligibility requirements for conduits. _See_ _Recording Indus. Ass’n of Am., Inc. v. Verizon Internet Servs_., Inc., 351 F.3d 1229 (D.C. Cir. 2003); _In re Charter Commc'ns, Inc_., _Subpoena Enforcement Matter_, 393 F.3d 771 (8th Cir. 2005).
+> Thank you for working with me on this matter. As a loyal subscriber, I appreciate your notifying me of this issue and hope that the protections of DMCA 512 put any concerns you may have to rest. If not, please contact me with any further questions.
 
-Under section 512(a), service providers like you are typically protected from damages for copyright infringement claims if you also maintain “a policy that provides for termination in appropriate circumstances of subscribers and account holders of the service provider’s system or network who are repeat infringers.” If you have and implement such a policy, and you otherwise qualify for the safe harbor, you should be free from fear of copyright damages.
+> Sincerely,
 
-As an organization committed to protecting the privacy of its customers, I hope you’ll agree that Tor is a valuable technology and will continue to support our effort to strengthen the Tor network.
-
-Thank you for working with me on this matter. As a loyal subscriber, I appreciate your notifying me of this issue and hope that the protections of DMCA 512 put any concerns you may have to rest. If not, please contact me with any further questions.
-
-Sincerely,
-
-[Your Name], on behalf of [Your Organization]</blockquote>
-
-
-
-
+> [Your Name], on behalf of [Your Organization]
 
 # Direct Complaint
 
+> I am writing on behalf of [Your Organization] in response to the notice copyright below.
 
+> [Your Organization] is a [Your State] State-based nonprofit corporation and encrypted transit internet service provider. I would like to assure you that [Your Organization] is neither infringing copyrights nor hosting the claimed infringing materials on behalf of users. The notice is likely based upon misunderstandings about the law and about some of the software we run.
 
+> As an initial matter, the faulty copyright notice was triggered by a routing program that we are running on our servers called Tor. The Tor network is a group of volunteer-operated routers on the Internet that helps people enhance their security, privacy, and safety. [Your Organization] only runs Tor traffic through our routers.
 
-<blockquote>I am writing on behalf of [Your Organization] in response to the notice copyright below.
+> Tor bounces communications through routers on the network before sending those packets on to their final destinations. However, Tor tunnels the connections so that no router can learn both the source and destination of the packets, which protects users from nefarious snooping on network traffic. The result is that the final IP address that the recipient receives is not the IP address of the sender.
 
-[Your Organization] is a [Your State] State-based nonprofit corporation and encrypted transit internet service provider. I would like to assure you that [Your Organization] is neither infringing copyrights nor hosting the claimed infringing materials on behalf of users. The notice is likely based upon misunderstandings about the law and about some of the software we run.
+> Tor is valuable because it promotes privacy and free expression around the world. It also protects users against hazards such as harassment, spam, identity theft, price discrimination, and even dissident surveillance by oppressive governments. To learn more about Tor, see [https://www.torproject.org/](https://www.torproject.org/).
 
-As an initial matter, the faulty copyright notice was triggered by a routing program that we are running on our servers called Tor. The Tor network is a group of volunteer-operated routers on the Internet that helps people enhance their security, privacy, and safety. [Your Organization] only runs Tor traffic through our routers.
+> As you may know, the DMCA creates four “safe harbors” that protect service providers from copyright liability for the acts of their users, provided that the ISPs fulfill certain requirements. 17 U.S.C. § 512. The DMCA’s requirements vary depending on the ISP’s role. You may be familiar with the “notice and takedown” provisions of section 512(c) of the DMCA, which applies to ISPs hosting content on behalf of users. However, those requirements do not apply when an ISP merely serves as a “conduit,” _i.e._, transmits, routes, or provides for connections through a system or network. The safe harbor of section 512(a) has different and less burdensome eligibility requirements for conduits. _See_ _Recording Indus. Ass’n of Am., Inc. v. Verizon Internet Servs_., Inc., 351 F.3d 1229 (D.C. Cir. 2003); _In re Charter Commc'ns, Inc_., _Subpoena Enforcement Matter_, 393 F.3d 771 (8th Cir. 2005).
 
-Tor bounces communications through routers on the network before sending those packets on to their final destinations. However, Tor tunnels the connections so that no router can learn both the source and destination of the packets, which protects users from nefarious snooping on network traffic. The result is that the final IP address that the recipient receives is not the IP address of the sender.
+> [Your Organization] operates Tor exit routers with connectivity to the [Your Internet Exchange Point(s)]. Because [Your Organization] serves as a conduit of online traffic, we fall within the section 512(a) safe harbor, and are not subject to the requirements of section 512(c).
 
-Tor is valuable because it promotes privacy and free expression around the world. It also protects users against hazards such as harassment, spam, identity theft, price discrimination, and even dissident surveillance by oppressive governments. To learn more about Tor, see [https://www.torproject.org/](https://www.torproject.org/).
+> Thank you for working with me on this matter. I hope that the protections of DMCA 512 put any concerns you may have to rest. If not, please contact me with any further questions.
 
-As you may know, the DMCA creates four “safe harbors” that protect service providers from copyright liability for the acts of their users, provided that the ISPs fulfill certain requirements. 17 U.S.C. § 512. The DMCA’s requirements vary depending on the ISP’s role. You may be familiar with the “notice and takedown” provisions of section 512(c) of the DMCA, which applies to ISPs hosting content on behalf of users. However, those requirements do not apply when an ISP merely serves as a “conduit,” _i.e._, transmits, routes, or provides for connections through a system or network. The safe harbor of section 512(a) has different and less burdensome eligibility requirements for conduits. _See_ _Recording Indus. Ass’n of Am., Inc. v. Verizon Internet Servs_., Inc., 351 F.3d 1229 (D.C. Cir. 2003); _In re Charter Commc'ns, Inc_., _Subpoena Enforcement Matter_, 393 F.3d 771 (8th Cir. 2005).
+> Sincerely,
 
-[Your Organization] operates Tor exit routers with connectivity to the [Your Internet Exchange Point(s)]. Because [Your Organization] serves as a conduit of online traffic, we fall within the section 512(a) safe harbor, and are not subject to the requirements of section 512(c).
-
-Thank you for working with me on this matter. I hope that the protections of DMCA 512 put any concerns you may have to rest. If not, please contact me with any further questions.
-
-Sincerely,
-
-[Your Name], on behalf of [Your Organization]</blockquote>
+> [Your Name], on behalf of [Your Organization]
 
 
 

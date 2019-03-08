@@ -11,17 +11,12 @@ tags:
 
 # ASN Request
 
-
-[![](/images/ARIN-ASN-Request-150x150.png)](/images/ARIN-ASN-Request.png)
-
+![](/images/ARIN-ASN-Request.png)
 
 # IPv6 Request
 
-
-[![](/images/ARIN-IPv6-request-150x150.png)](/images/ARIN-IPv6-request.png)
-
+![](/images/ARIN-IPv6-request.png)
 
 # IPv4 Request
 
-
-[![](/images/ARIN-IPv4-Request-150x150.png)](/images/ARIN-IPv4-Request.png)
+![](/images/ARIN-IPv4-Request.png)

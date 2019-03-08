@@ -16,107 +16,69 @@ This is a walk through of who our current peers are and our BGP setup.
 
 Special thanks to [DFRI](https://twitter.com/dfri_se), [Paul English](https://twitter.com/penglish1), [Seattle Internet Exchange](https://twitter.com/seattleix), and [Theodore Baschak](https://twitter.com/TheodoreBaschak) for your time and patience!
 
-
 # Current Peers
-
 
 202 peers via the SIX Route Servers, 12 Direct Peers Peers via the SIX and 1 Transit Peer through the SIX.
 
-    
-    6456   - Altopia Corporation
-    13335  - CloudFlare, Inc.
-    395823 - doof.net
-    36459  - Github
-    6939   - Hurricane Electric**
-    57695  - Misaka Network LLC
-    3856   - Packet Clearing House
-    42     - WoodyNet (Also Packet Clearing House)
-    23265  - Pocketinet Communications, Inc.
-    16652  - Riseup Networks
-    33108  - Seattle Internet Exchange*
-    64241  - Wobscale Technologies, LLC
-    10310  - Yahoo! Inc.
-    
-
+```
+6456   - Altopia Corporation
+13335  - CloudFlare, Inc.
+395823 - doof.net
+36459  - Github
+6939   - Hurricane Electric**
+57695  - Misaka Network LLC
+3856   - Packet Clearing House
+42     - WoodyNet (Also Packet Clearing House)
+23265  - Pocketinet Communications, Inc.
+16652  - Riseup Networks
+33108  - Seattle Internet Exchange*
+64241  - Wobscale Technologies, LLC
+10310  - Yahoo! Inc.
+```
 
 Updated 7/4/2018
 
-* The Seattle Internet Exchange (SIX) peer is for Route Servers
-** Hurricane Electric is our current transit provider.
+<p>* The Seattle Internet Exchange (SIX) peer is for Route Servers</p>
+<p>** Hurricane Electric is our current transit provider.</p>
 
 To see a list of all peers through the route servers:
 
-
-
- 	
-  * [https://www.seattleix.net/rs/rs2.1500.v4.peers.txt](https://www.seattleix.net/rs/rs2.1500.v4.peers.txt)
-
- 	
-  * [https://www.seattleix.net/rs/rs3.1500.v4.peers.txt](https://www.seattleix.net/rs/rs3.1500.v4.peers.txt)
-
- 	
-  * [https://www.seattleix.net/rs/rs2.1500.v6.peers.txt](https://www.seattleix.net/rs/rs2.1500.v6.peers.txt)
-
- 	
-  * [https://www.seattleix.net/rs/rs3.1500.v6.peers.txt](https://www.seattleix.net/rs/rs3.1500.v6.peers.txt)
-
-
-
+* [https://www.seattleix.net/rs/rs2.1500.v4.peers.txt](https://www.seattleix.net/rs/rs2.1500.v4.peers.txt)
+* [https://www.seattleix.net/rs/rs3.1500.v4.peers.txt](https://www.seattleix.net/rs/rs3.1500.v4.peers.txt)
+* [https://www.seattleix.net/rs/rs2.1500.v6.peers.txt](https://www.seattleix.net/rs/rs2.1500.v6.peers.txt)
+* [https://www.seattleix.net/rs/rs3.1500.v6.peers.txt](https://www.seattleix.net/rs/rs3.1500.v6.peers.txt)
 
 # BGP Setup
-
 
 Since we currently use pfSense, we use [openbgpd](https://man.openbsd.org/bgpd.conf) to peer with other Autonomous Systems.
 
 In order to accomplish this, there are a few pre-requisites:
-
-
-
  	
-  1. An AS Number (ASN). Check out the list of Regional Internet Registries (RIR) for your respective geographical location on getting your ASN and Direct Allocation of IP Addresses (IPv6 & IPv4). They are listed at the bottom in the External Resources section of this page.
-
- 	
-  2. If peering with an Internet Exchange Point (IXP) a dedicated IP address from them in order to peer (Both IPv6 & IPv4).
-
- 	
-  3. Install the openbgpd package in pfSense (System > Package Manager > Available Packages) and then enter OpenBGPD.
-
- 	
-  4. Submit a Letter of Agency (LOA) to your transit provider so they can announce your ASN thus IP space upstream.
-
- 	
-  5. When switching from a typical router config to that of a BGP router, there are some fundamental changes in architecture that are required. Take a look at our Conversion Article here: [https://emeraldonion.org/eo-pfsense-conversion-plan/](https://emeraldonion.org/eo-pfsense-conversion-plan/)
-
+1. An AS Number (ASN). Check out the list of Regional Internet Registries (RIR) for your respective geographical location on getting your ASN and Direct Allocation of IP Addresses (IPv6 & IPv4). They are listed at the bottom in the External Resources section of this page.
+2. If peering with an Internet Exchange Point (IXP) a dedicated IP address from them in order to peer (Both IPv6 & IPv4).
+3. Install the openbgpd package in pfSense (System > Package Manager > Available Packages) and then enter OpenBGPD.
+4. Submit a Letter of Agency (LOA) to your transit provider so they can announce your ASN thus IP space upstream.
+5. When switching from a typical router config to that of a BGP router, there are some fundamental changes in architecture that are required. Take a look at our Conversion Article here: [https://emeraldonion.org/eo-pfsense-conversion-plan/](https://emeraldonion.org/eo-pfsense-conversion-plan/)
 
 A fundamental aspect to this setup is touched on in the conversion plan linked in step 5. It is important to understand that a typical router setup is that the WAN links have default gateways but when setting up or switching to BGP connections, Default Gateways are not used and must be removed from the NIC config. If you want your transit provider to be your default route, you ask them to advertise that route to you and then through BGP you will get the 0.0.0.0 route. In our case, our transit provider is WowRack (AS23033) and they advertise the default route to us. The other ASNs that we peer with do not and it is BGP's job to select the correct route based on AS length.
 
 We found that after installing the openbgpd package in pfSense, it is best to just use the raw config tab (Services > OpenBGPD > Raw config). The issue we ran into is that after filling out the wizard, we needed to make some changes. Doing so through the wizard didn't update the raw config which is what the service actually looks at (bgpd.conf). So, now we just manage it through the raw config.
 
-
-
-
 # Our BGP Config
-
 
 At a high level, there are 3 major parts to the config:
 
-
 #### Router Config
-
 
 Such as ASN, Router ID, Network Info and Options (Like fib update and holdtime).
 
-
 #### Groups and Neighbors
-
 
 This will have a bunch of groups with neighbors in them. It can also have groups that contains two Neighbors. A group being a single AS and Neighbors being a couple of routers that Neighbor has (usually for redundancy).
 
 We highly recommend peering with your local Internet Exchange's (IX) route servers. This is an easy way to peer with a bunch of ASNs without having to setup direct peering. Route servers are however not a substitute for direct peering. When doing this, make sure in the bgpd.conf in the neighbor section of the group to tell bgpd not to enforce the neighbor as using "enforce neighbor-as no" so that it will accept routes from ASNs that aren't the same as the route servers' peering ASN.
 
-
 #### Filtering Rules
-
 
 This is how we allow or deny routes to come through from our peers. First we block everything, then we allow our peers, then we block specific networks like Martians (Such as RFC1918, etc).
 
@@ -124,924 +86,902 @@ We recently made some changes to this section to help protect against some poor 
 
 And we also made some updates to the bogon network list per the OpenBGPD standard config. These networks aren't meant for Internet traffic so we filter them out.
 
-
 #### bgpd.conf
 
+```
+AS 396507
 
+fib-update yes
+holdtime 90
 
-    
-    AS 396507
-    
-    fib-update yes
-    holdtime 90
-    
-    router-id 206.81.81.158
-    
-    # IPv4 network
-    network 23.129.64.0/24
-    # IPv6 network
-    network 2620:18C::/36
-    
-    #### IPv4 neighbors ####
-    group "AS-WOWRACK-Transit-v4" {
-    	remote-as 23033
-    	neighbor 216.176.186.129 {
-    		descr "WOW_trans_rs1v4"
-    		announce self
-    		local-address 216.176.186.130
-    		max-prefix 1000000
-    }
-    }
-    group "AS-SIXRSv4" {
-    	remote-as 33108
-    	neighbor 206.81.80.2 {
-    		descr "SIXRS_rs2v4"
-    		announce self
-    		local-address 206.81.81.158
-    		enforce neighbor-as no
-    		max-prefix 200000
-    }
-    	neighbor 206.81.80.3 {
-    		descr "SIXRS_rs3v4"
-    		announce self
-    		local-address 206.81.81.158
-    		enforce neighbor-as no
-    		max-prefix 200000
-    }
-    }
-    group "AS-HURRICANEv4" {
-    	remote-as 6939
-    	neighbor 206.81.80.40 {
-    		descr "HE_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 152000
-    }
-    }
-    group "AS-ALTOPIAv4" {
-    	remote-as 6456
-    	neighbor 206.81.80.10 {
-    		descr "ALT_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 20 restart 30
-    }
-    	neighbor 206.81.81.41 {
-    		descr "ALT_rs2v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 20 restart 30
-    }
-    }
-    group "AS-POCKETINETv4" {
-    	remote-as 23265
-    	neighbor 206.81.80.88 {
-    		descr "POK_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 600
-    }
-    }
-    group "AS-DOOFv4" {
-    	remote-as 395823
-    	neighbor 206.81.81.125 {
-    		descr "DOOF_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 5
-    }
-    }
-    group "AS-PCHv4" {
-    	remote-as 3856
-    	neighbor 206.81.80.81 {
-    		descr "PCH_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 600
-    }
-    }
-    group "AS-PCHWNv4" {
-    	remote-as 42
-    	neighbor 206.81.80.80 {
-    		descr "PCHWN_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 600
-    }
-    }
-    group "AS-WOBv4" {
-    	remote-as 64241
-    	neighbor 206.81.81.87 {
-    		descr "WOB_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 5
-    }
-    }
-    group "AS-GOOGv4" {
-    	remote-as 15169
-    	neighbor 206.81.80.17 {
-    		descr "GOOG_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 15000
-    }
-    }
-    group "AS-MISAKAv4" {
-    	remote-as 57695
-    	neighbor 206.81.81.161 {
-    		descr "MISAKA_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 200
-    }
-    }
-    group "AS-RISUPv4" {
-    	remote-as 16652
-    	neighbor 206.81.81.74 {
-    		descr "RISUP_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 20
-    }
-    }
-    group "AS-AKAMAIv4" {
-    	remote-as 20940
-    	neighbor 206.81.80.113 {
-    		descr "AKAMAI_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 200
-    }
-    }
-    group "AS-CoSITv4" {
-    	remote-as 3401
-    	neighbor 206.81.80.202 {
-    		descr "CoSIT_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 10
-    }
-    }
-    group "AS-CLDFLRv4" {
-    	remote-as 13335
-    	neighbor 206.81.81.10 {
-    		descr "CLDFLR_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 1000
-    }
-    }
-    group "AS-DYNv4" {
-    	remote-as 33517
-    	neighbor 206.81.81.121 {
-    		descr "DYN_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 400
-    }
-    }
-    group "AS-FCBKv4" {
-    	remote-as 32934
-    	neighbor 206.81.80.181 {
-    		descr "FCBK_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 200
-    }
-    	neighbor 206.81.80.211 {
-    		descr "FCBK_rs2v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 200
-    }
-    }
-    group "AS-GITHUBv4" {
-    	remote-as 36459
-    	neighbor 206.81.81.89 {
-    		descr "GITHUB_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 100
-    }
-    	neighbor 206.81.81.90 {
-    		descr "GITHUB_rs2v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 100
-    }
-    }
-    group "AS-MSFTv4" {
-    	remote-as 8075
-    	neighbor 206.81.80.30 {
-    		descr "MSFT_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 2000
-    }
-    	neighbor 206.81.80.68 {
-    		descr "MSFT_rs2v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 2000
-    }
-    }
-    group "AS-OpenDNSv4" {
-    	remote-as 36692
-    	neighbor 206.81.80.53 {
-    		descr "OpenDNS_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 200
-    }
-    }
-    group "AS-SPLv4" {
-    	remote-as 21525
-    	neighbor 206.81.80.196 {
-    		descr "SPL_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 10
-    }
-    }
-    group "AS-TWITTERv4" {
-    	remote-as 13414
-    	neighbor 206.81.81.31 {
-    		descr "TWITTER_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 200
-    }
-    }
-    group "AS-VRISIGNv4" {
-    	remote-as 7342
-    	neighbor 206.81.80.133 {
-    		descr "VRISIGN_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 600
-    }
-    }
-    group "AS-YAHOOv4" {
-    	remote-as 10310
-    	neighbor 206.81.80.98 {
-    		descr "YAHOO_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 2000
-    }
-    	neighbor 206.81.81.50 {
-    		descr "YAHOO_rs2v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 2000
-    }
-    }
-    group "AS-INTEGRAv4" {
-    	remote-as 7385
-    	neighbor 206.81.80.102 {
-    		descr "INTEGRA_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 2000
-    }
-    }
-    group "AS-PNWGPv4" {
-    	remote-as 101
-    	neighbor 206.81.80.84 {
-    		descr "PNWGP_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 500
-    }
-    }
-    group "AS-WAVEv4" {
-    	remote-as 11404
-    	neighbor 206.81.80.56 {
-    		descr "WAVE_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 6000
-    }
-    }
-    group "AS-AMAZONv4" {
-    	remote-as 16509
-    	neighbor 206.81.80.147 {
-    		descr "AMAZON_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 4000
-    }
-    	neighbor 206.81.80.248 {
-    		descr "AMAZON_rs2v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 4000
-    }
-    }
-    group "AS-SYMTECv4" {
-    	remote-as 27471
-    	neighbor 206.81.81.169 {
-    		descr "SYMTEC_rs1v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 40
-    }
-    	neighbor 206.81.81.170 {
-    		descr "SYMTEC_rs2v4"
-    		announce self
-    		local-address 206.81.81.158
-    		max-prefix 40
-    }
-    }
-    
-    #### IPv6 neighbors ####
-    group "AS-WOWRACK-Transit-v6" {
-    	remote-as 23033
-    	neighbor 2607:F8F8:2F0:811:2::1 {
-    		descr "WOW_trans_rs1v6"
-    		announce self
-    		local-address 2607:F8F8:2F0:811:2::2
-    		max-prefix 100000
-    }
-    }
-    group "AS-SIXRSv6" {
-    	remote-as 33108
-    	neighbor 2001:504:16::2 {
-    		descr "SIXRS_rs2v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		enforce neighbor-as no
-    		max-prefix 60000
-    }
-    	neighbor 2001:504:16::3 {
-    		descr "SIXRS_rs3v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		enforce neighbor-as no
-    		max-prefix 60000
-    }
-    }
-    group "AS-HURRICANEv6" {
-    	remote-as 6939
-    	neighbor 2001:504:16::1b1b {
-    		descr "HE_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 41000
-    }
-    }
-    group "AS-ALTOPIAv6" {
-    	remote-as 6456
-    	neighbor 2001:504:16::1938 {
-    		descr "ALT_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 20 restart 30
-    }
-    	neighbor 2001:504:16::297:0:1938 {
-    		descr "ALT_rs2v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 20 restart 30
-    }
-    }
-    group "AS-POCKETINETv6" {
-    	remote-as 23265
-    	neighbor 2001:504:16::5ae1 {
-    		descr "POK_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 600
-    }
-    }
-    group "AS-DOOFv6" {
-    	remote-as 395823
-    	neighbor 2001:504:16::6:a2f {
-    		descr "DOOF_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 5
-    }
-    }
-    group "AS-PCHv6" {
-    	remote-as 3856
-    	neighbor 2001:504:16::f10 {
-    		descr "PCH_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 600
-    }
-    }
-    group "AS-PCHWNv6" {
-    	remote-as 42
-    	neighbor 2001:504:16::2a {
-    		descr "PCHWN_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 600
-    }
-    }
-    group "AS-WOBv6" {
-    	remote-as 64241
-    	neighbor 2001:504:16::faf1 {
-    		descr "WOB_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 5
-    }
-    }
-    group "AS-GOOGv6" {
-    	remote-as 15169
-    	neighbor 2001:504:16::3b41 {
-    		descr "GOOG_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 750
-    }
-    }
-    group "AS-MISAKAv6" {
-    	remote-as 57695
-    	neighbor 2001:504:16::e15f {
-    		descr "MISAKA_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 150
-    }
-    }
-    group "AS-RISUPv6" {
-    	remote-as 16652
-    	neighbor 2001:504:16::410c {
-    		descr "RISUP_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 10
-    }
-    }
-    group "AS-AKAMAIv6" {
-    	remote-as 20940
-    	neighbor 2001:504:16::51cc {
-    		descr "AKAMAI_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 40
-    }
-    }
-    group "AS-CLDFLRv6" {
-    	remote-as 13335
-    	neighbor 2001:504:16::3417 {
-    		descr "CLDFLR_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 200
-    }
-    }
-    group "AS-DYNv6" {
-    	remote-as 33517
-    	neighbor 2001:504:16::82ed {
-    		descr "DYN_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 200
-    }
-    }
-    group "AS-FCBKv6" {
-    	remote-as 32934
-    	neighbor 2001:504:16::80a6 {
-    		descr "FCBK_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 200
-    }
-    	neighbor 2001:504:16::211:0:80a6 {
-    		descr "FCBK_rs2v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 200
-    }
-    }
-    group "AS-GITHUBv6" {
-    	remote-as 36459
-    	neighbor 2001:504:16::8e6b {
-    		descr "GITHUB_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 20
-    }
-    	neighbor 2001:504:16::346:0:8e6b {
-    		descr "GITHUB_rs2v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 20
-    }
-    }
-    group "AS-MSFTv6" {
-    	remote-as 8075
-    	neighbor 2001:504:16::1f8b {
-    		descr "MSFT_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 500
-    }
-    	neighbor 2001:504:16::68:0:1f8b {
-    		descr "MSFT_rs2v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 500
-    }
-    }
-    group "AS-OpenDNSv6" {
-    	remote-as 36692
-    	neighbor 2001:504:16::8f54 {
-    		descr "OpenDNS_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 40
-    }
-    }
-    group "AS-SPLv6" {
-    	remote-as 21525
-    	neighbor 2001:504:16::5415 {
-    		descr "SPL_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 10
-    }
-    }
-    group "AS-TWITTERv6" {
-    	remote-as 13414
-    	neighbor 2001:504:16::3466 {
-    		descr "TWITTER_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 10
-    }
-    }
-    group "AS-VRISIGNv6" {
-    	remote-as 7342
-    	neighbor 2001:504:16::1cae {
-    		descr "VRISIGN_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 100
-    }
-    }
-    group "AS-YAHOOv6" {
-    	remote-as 10310
-    	neighbor 2001:504:16::2846 {
-    		descr "YAHOO_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 200
-    }
-    	neighbor 2001:504:16::306:0:2846 {
-    		descr "YAHOO_rs2v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 200
-    }
-    }
-    group "AS-INTEGRAv6" {
-    	remote-as 7385
-    	neighbor 2001:504:16::1cd9 {
-    		descr "INTEGRA_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 100
-    }
-    }
-    group "AS-PNWGPv6" {
-    	remote-as 101
-    	neighbor 2001:504:16::65 {
-    		descr "PNWGP_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 20
-    }
-    }
-    group "AS-WAVEv6" {
-    	remote-as 11404
-    	neighbor 2001:504:16::2c8c {
-    		descr "WAVE_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 500
-    }
-    }
-    group "AS-AMAZONv6" {
-    	remote-as 16509
-    	neighbor 2001:504:16::407d {
-    		descr "AMAZON_rs1v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 1000
-    }
-    	neighbor 2001:504:16::248:0:407d {
-    		descr "AMAZON_rs2v6"
-    		announce self
-    		local-address 2001:504:16::6:cdb
-    		max-prefix 1000
-    }
-    }
-    
-    #### Filtering Rules ####
-    
-    deny from any
-    deny to any
-    
-    # https://www.arin.net/announcements/2014/20140130.html
-    # This block will be subject to a minimum size allocation of /28 and a
-    # maximum size allocation of /24. ARIN should use sparse allocation when
-    # possible within that /10 block.
-    allow from any prefix 23.128.0.0/10 prefixlen 24 - 28   # ARIN IPv6 transition
-    
-    ## IPv4 ##
-    # WOW_trans_rs1v4
-    allow from 216.176.186.129
-    allow to 216.176.186.129
-    # SIXRS_rs2v4
-    allow from 206.81.80.2 inet prefixlen 8 - 24
-    allow to 206.81.80.2 inet prefixlen 8 - 24
-    # SIXRS_rs3v4
-    allow from 206.81.80.3 inet prefixlen 8 - 24
-    allow to 206.81.80.3 inet prefixlen 8 - 24
-    # HE_rs1v4
-    allow from 206.81.80.40
-    allow to 206.81.80.40
-    # ALT_rs1v4
-    allow from 206.81.80.10 inet prefixlen 8 - 24
-    allow to 206.81.80.10 inet prefixlen 8 - 24
-    # ALT_rs2v4
-    allow from 206.81.81.41 inet prefixlen 8 - 24
-    allow to 206.81.81.41 inet prefixlen 8 - 24
-    # POK_rs1v4
-    allow from 206.81.80.88 inet prefixlen 8 - 24
-    allow to 206.81.80.88 inet prefixlen 8 - 24
-    # DOOF_rs1v4
-    allow from 206.81.81.125 inet prefixlen 8 - 24
-    allow to 206.81.81.125 inet prefixlen 8 - 24
-    # PCH_rs1v4
-    allow from 206.81.80.81 inet prefixlen 8 - 24
-    allow to 206.81.80.81 inet prefixlen 8 - 24
-    # PCHWN_rs1v4
-    allow from 206.81.80.80 inet prefixlen 8 - 24
-    allow to 206.81.80.80 inet prefixlen 8 - 24
-    # WOB_rs1v4
-    allow from 206.81.81.87 inet prefixlen 8 - 24
-    allow to 206.81.81.87 inet prefixlen 8 - 24
-    # GOOG_rs1v4
-    allow from 206.81.80.17
-    allow to 206.81.80.17
-    # MISAKA_rs1v4
-    allow from 206.81.81.161 inet prefixlen 8 - 24
-    allow to 206.81.81.161 inet prefixlen 8 - 24
-    # RISUP_rs1v4
-    allow from 206.81.81.74 inet prefixlen 8 - 24
-    allow to 206.81.81.74 inet prefixlen 8 - 24
-    # AKAMAI_rs1v4
-    allow from 206.81.80.113 inet prefixlen 8 - 24
-    allow to 206.81.80.113 inet prefixlen 8 - 24
-    # CoSIT_rs1v4
-    allow from 206.81.80.202 inet prefixlen 8 - 24
-    allow to 206.81.80.202 inet prefixlen 8 - 24
-    # CLDFLR_rs1v4
-    allow from 206.81.81.10 inet prefixlen 8 - 24
-    allow to 206.81.81.10 inet prefixlen 8 - 24
-    # DYN_rs1v4
-    allow from 206.81.81.121 inet prefixlen 8 - 24
-    allow to 206.81.81.121 inet prefixlen 8 - 24
-    # FCBK_rs1v4
-    allow from 206.81.80.181 inet prefixlen 8 - 24
-    allow to 206.81.80.181 inet prefixlen 8 - 24
-    # FCBK_rs2v4
-    allow from 206.81.80.211 inet prefixlen 8 - 24
-    allow to 206.81.80.211 inet prefixlen 8 - 24
-    # GITHUB_rs1v4
-    allow from 206.81.81.89 inet prefixlen 8 - 24
-    allow to 206.81.81.89 inet prefixlen 8 - 24
-    # GITHUB_rs2v4
-    allow from 206.81.81.90 inet prefixlen 8 - 24
-    allow to 206.81.81.90 inet prefixlen 8 - 24
-    # MSFT_rs1v4
-    allow from 206.81.80.30 inet prefixlen 8 - 24
-    allow to 206.81.80.30 inet prefixlen 8 - 24
-    # MSFT_rs2v4
-    allow from 206.81.80.68 inet prefixlen 8 - 24
-    allow to 206.81.80.68 inet prefixlen 8 - 24
-    # OpenDNS_rs1v4
-    allow from 206.81.80.53 inet prefixlen 8 - 24
-    allow to 206.81.80.53 inet prefixlen 8 - 24
-    # SPL_rs1v4
-    allow from 206.81.80.196 inet prefixlen 8 - 24
-    allow to 206.81.80.196 inet prefixlen 8 - 24
-    # TWITTER_rs1v4
-    allow from 206.81.81.31 inet prefixlen 8 - 24
-    allow to 206.81.81.31 inet prefixlen 8 - 24
-    # VRISIGN_rs1v4
-    allow from 206.81.80.133 inet prefixlen 8 - 24
-    allow to 206.81.80.133 inet prefixlen 8 - 24
-    # YAHOO_rs1v4
-    allow from 206.81.80.98 inet prefixlen 8 - 24
-    allow to 206.81.80.98 inet prefixlen 8 - 24
-    # YAHOO_rs2v4
-    allow from 206.81.81.50 inet prefixlen 8 - 24
-    allow to 206.81.81.50 inet prefixlen 8 - 24
-    # INTEGRA_rs1v4
-    allow from 206.81.80.102 inet prefixlen 8 - 24
-    allow to 206.81.80.102 inet prefixlen 8 - 24
-    # PNWGP_rs1v4
-    allow from 206.81.80.84 inet prefixlen 8 - 24
-    allow to 206.81.80.84 inet prefixlen 8 - 24
-    # WAVE_rs1v4
-    allow from 206.81.80.56 inet prefixlen 8 - 24
-    allow to 206.81.80.56 inet prefixlen 8 - 24
-    # AMAZON_rs1v4
-    allow from 206.81.80.147 inet prefixlen 8 - 24
-    allow to 206.81.80.147 inet prefixlen 8 - 24
-    # AMAZON_rs2v4
-    allow from 206.81.80.248 inet prefixlen 8 - 24
-    allow to 206.81.80.248 inet prefixlen 8 - 24
-    # SYMTEC_rs1v4
-    allow from 206.81.81.169 inet prefixlen 8 - 24
-    allow to 206.81.81.169 inet prefixlen 8 - 24
-    # SYMTEC_rs2v4
-    allow from 206.81.81.170 inet prefixlen 8 - 24
-    allow to 206.81.81.170 inet prefixlen 8 - 24
-    
-    ## IPv6 ##
-    # WOW_trans_rs1v6
-    allow from 2607:F8F8:2F0:811:2::1
-    allow to 2607:F8F8:2F0:811:2::1
-    # SIXRS_rs2v6
-    allow from 2001:504:16::2 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::2 inet6 prefixlen 16 - 48
-    # SIXRS_rs3v6
-    allow from 2001:504:16::3 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::3 inet6 prefixlen 16 - 48
-    # HE_rs1v6
-    allow from 2001:504:16::1b1b
-    allow to 2001:504:16::1b1b
-    # ALT_rs1v6
-    allow from 2001:504:16::1938 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::1938 inet6 prefixlen 16 - 48
-    # ALT_rs2v6
-    allow from 2001:504:16::297:0:1938 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::297:0:1938 inet6 prefixlen 16 - 48
-    # POK_rs1v6
-    allow from 2001:504:16::5ae1 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::5ae1 inet6 prefixlen 16 - 48
-    # DOOF_rs1v6
-    allow from 2001:504:16::6:a2f inet6 prefixlen 16 - 48
-    allow to 2001:504:16::6:a2f inet6 prefixlen 16 - 48
-    # PCH_rs1v6
-    allow from 2001:504:16::f10 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::f10 inet6 prefixlen 16 - 48
-    # PCHWN_rs1v6
-    allow from 2001:504:16::2a inet6 prefixlen 16 - 48
-    allow to 2001:504:16::2a inet6 prefixlen 16 - 48
-    # WOB_rs1v6
-    allow from 2001:504:16::faf1 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::faf1 inet6 prefixlen 16 - 48
-    # GOOG_rs1v6
-    allow from 2001:504:16::3b41
-    allow to 2001:504:16::3b41
-    # MISAKA_rs1v6
-    allow from 2001:504:16::e15f inet6 prefixlen 16 - 48
-    allow to 2001:504:16::e15f inet6 prefixlen 16 - 48
-    # RISUP_rs1v6
-    allow from 2001:504:16::410c inet6 prefixlen 16 - 48
-    allow to 2001:504:16::410c inet6 prefixlen 16 - 48
-    # AKAMAI_rs1v6
-    allow from 2001:504:16::51cc inet6 prefixlen 16 - 48
-    allow to 2001:504:16::51cc inet6 prefixlen 16 - 48
-    # CLDFLR_rs1v6
-    allow from 2001:504:16::3417 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::3417 inet6 prefixlen 16 - 48
-    # DYN_rs1v6
-    allow from 2001:504:16::82ed inet6 prefixlen 16 - 48
-    allow to 2001:504:16::82ed inet6 prefixlen 16 - 48
-    # FCBK_rs1v6
-    allow from 2001:504:16::80a6 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::80a6 inet6 prefixlen 16 - 48
-    # FCBK_rs2v6
-    allow from 2001:504:16::211:0:80a6 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::211:0:80a6 inet6 prefixlen 16 - 48
-    # GITHUB_rs1v6
-    allow from 2001:504:16::8e6b inet6 prefixlen 16 - 48
-    allow to 2001:504:16::8e6b inet6 prefixlen 16 - 48
-    # GITHUB_rs2v6
-    allow from 2001:504:16::346:0:8e6b inet6 prefixlen 16 - 48
-    allow to 2001:504:16::346:0:8e6b inet6 prefixlen 16 - 48
-    # MSFT_rs1v6
-    allow from 2001:504:16::1f8b inet6 prefixlen 16 - 48
-    allow to 2001:504:16::1f8b inet6 prefixlen 16 - 48
-    # MSFT_rs2v6
-    allow from 2001:504:16::68:0:1f8b inet6 prefixlen 16 - 48
-    allow to 2001:504:16::68:0:1f8b inet6 prefixlen 16 - 48
-    # OpenDNS_rs1v6
-    allow from 2001:504:16::8f54 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::8f54 inet6 prefixlen 16 - 48
-    # SPL_rs1v6
-    allow from 2001:504:16::5415 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::5415 inet6 prefixlen 16 - 48
-    # TWITTER_rs1v6
-    allow from 2001:504:16::3466 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::3466 inet6 prefixlen 16 - 48
-    # VRISIGN_rs1v6
-    allow from 2001:504:16::1cae inet6 prefixlen 16 - 48
-    allow to 2001:504:16::1cae inet6 prefixlen 16 - 48
-    # YAHOO_rs1v6
-    allow from 2001:504:16::2846 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::2846 inet6 prefixlen 16 - 48
-    # YAHOO_rs2v6
-    allow from 2001:504:16::306:0:2846 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::306:0:2846 inet6 prefixlen 16 - 48
-    # INTEGRA_rs1v6
-    allow from 2001:504:16::1cd9 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::1cd9 inet6 prefixlen 16 - 48
-    # PNWGP_rs1v6
-    allow from 2001:504:16::65 inet6 prefixlen 16 - 48
-    allow to 2001:504:16::65 inet6 prefixlen 16 - 48
-    # WAVE_rs1v6
-    allow from 2001:504:16::2c8c inet6 prefixlen 16 - 48
-    allow to 2001:504:16::2c8c inet6 prefixlen 16 - 48
-    # AMAZON_rs1v6
-    allow from 2001:504:16::407d inet6 prefixlen 16 - 48
-    allow to 2001:504:16::407d inet6 prefixlen 16 - 48
-    # AMAZON_rs2v6
-    allow from 2001:504:16::248:0:407d inet6 prefixlen 16 - 48
-    allow to 2001:504:16::248:0:407d inet6 prefixlen 16 - 48
-    
-    # filter bogus networks according to RFC5735
-    deny from any prefix 0.0.0.0/8 prefixlen >= 8           # 'this' network [RFC1122]
-    deny from any prefix 10.0.0.0/8 prefixlen >= 8          # private space [RFC1918]
-    deny from any prefix 100.64.0.0/10 prefixlen >= 10      # CGN Shared [RFC6598]
-    deny from any prefix 127.0.0.0/8 prefixlen >= 8         # localhost [RFC1122]
-    deny from any prefix 169.254.0.0/16 prefixlen >= 16     # link local [RFC3927]
-    deny from any prefix 172.16.0.0/12 prefixlen >= 12      # private space [RFC1918]
-    deny from any prefix 192.0.2.0/24 prefixlen >= 24       # TEST-NET-1 [RFC5737]
-    deny from any prefix 192.168.0.0/16 prefixlen >= 16     # private space [RFC1918]
-    deny from any prefix 198.18.0.0/15 prefixlen >= 15      # benchmarking [RFC2544]
-    deny from any prefix 198.51.100.0/24 prefixlen >= 24    # TEST-NET-2 [RFC5737]
-    deny from any prefix 203.0.113.0/24 prefixlen >= 24     # TEST-NET-3 [RFC5737]
-    deny from any prefix 224.0.0.0/4 prefixlen >= 4         # multicast
-    deny from any prefix 240.0.0.0/4 prefixlen >= 4         # reserved
-    
-    # filter bogus IPv6 networks according to IANA
-    deny from any prefix ::/8 prefixlen >= 8
-    deny from any prefix 0100::/64 prefixlen >= 64          # Discard-Only [RFC6666]
-    deny from any prefix 2001:2::/48 prefixlen >= 48        # BMWG [RFC5180]
-    deny from any prefix 2001:10::/28 prefixlen >= 28       # ORCHID [RFC4843]
-    deny from any prefix 2001:db8::/32 prefixlen >= 32      # docu range [RFC3849]
-    deny from any prefix 3ffe::/16 prefixlen >= 16          # old 6bone
-    deny from any prefix fc00::/7 prefixlen >= 7            # unique local unicast
-    deny from any prefix fe80::/10 prefixlen >= 10          # link local unicast
-    deny from any prefix fec0::/10 prefixlen >= 10          # old site local unicast
-    deny from any prefix ff00::/8 prefixlen >= 8            # multicast
-    
+router-id 206.81.81.158
 
+# IPv4 network
+network 23.129.64.0/24
+# IPv6 network
+network 2620:18C::/36
+
+#### IPv4 neighbors ####
+group "AS-WOWRACK-Transit-v4" {
+	remote-as 23033
+	neighbor 216.176.186.129 {
+		descr "WOW_trans_rs1v4"
+		announce self
+		local-address 216.176.186.130
+		max-prefix 1000000
+}
+}
+group "AS-SIXRSv4" {
+	remote-as 33108
+	neighbor 206.81.80.2 {
+		descr "SIXRS_rs2v4"
+		announce self
+		local-address 206.81.81.158
+		enforce neighbor-as no
+		max-prefix 200000
+}
+	neighbor 206.81.80.3 {
+		descr "SIXRS_rs3v4"
+		announce self
+		local-address 206.81.81.158
+		enforce neighbor-as no
+		max-prefix 200000
+}
+}
+group "AS-HURRICANEv4" {
+	remote-as 6939
+	neighbor 206.81.80.40 {
+		descr "HE_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 152000
+}
+}
+group "AS-ALTOPIAv4" {
+	remote-as 6456
+	neighbor 206.81.80.10 {
+		descr "ALT_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 20 restart 30
+}
+	neighbor 206.81.81.41 {
+		descr "ALT_rs2v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 20 restart 30
+}
+}
+group "AS-POCKETINETv4" {
+	remote-as 23265
+	neighbor 206.81.80.88 {
+		descr "POK_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 600
+}
+}
+group "AS-DOOFv4" {
+	remote-as 395823
+	neighbor 206.81.81.125 {
+		descr "DOOF_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 5
+}
+}
+group "AS-PCHv4" {
+	remote-as 3856
+	neighbor 206.81.80.81 {
+		descr "PCH_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 600
+}
+}
+group "AS-PCHWNv4" {
+	remote-as 42
+	neighbor 206.81.80.80 {
+		descr "PCHWN_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 600
+}
+}
+group "AS-WOBv4" {
+	remote-as 64241
+	neighbor 206.81.81.87 {
+		descr "WOB_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 5
+}
+}
+group "AS-GOOGv4" {
+	remote-as 15169
+	neighbor 206.81.80.17 {
+		descr "GOOG_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 15000
+}
+}
+group "AS-MISAKAv4" {
+	remote-as 57695
+	neighbor 206.81.81.161 {
+		descr "MISAKA_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 200
+}
+}
+group "AS-RISUPv4" {
+	remote-as 16652
+	neighbor 206.81.81.74 {
+		descr "RISUP_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 20
+}
+}
+group "AS-AKAMAIv4" {
+	remote-as 20940
+	neighbor 206.81.80.113 {
+		descr "AKAMAI_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 200
+}
+}
+group "AS-CoSITv4" {
+	remote-as 3401
+	neighbor 206.81.80.202 {
+		descr "CoSIT_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 10
+}
+}
+group "AS-CLDFLRv4" {
+	remote-as 13335
+	neighbor 206.81.81.10 {
+		descr "CLDFLR_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 1000
+}
+}
+group "AS-DYNv4" {
+	remote-as 33517
+	neighbor 206.81.81.121 {
+		descr "DYN_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 400
+}
+}
+group "AS-FCBKv4" {
+	remote-as 32934
+	neighbor 206.81.80.181 {
+		descr "FCBK_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 200
+}
+	neighbor 206.81.80.211 {
+		descr "FCBK_rs2v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 200
+}
+}
+group "AS-GITHUBv4" {
+	remote-as 36459
+	neighbor 206.81.81.89 {
+		descr "GITHUB_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 100
+}
+	neighbor 206.81.81.90 {
+		descr "GITHUB_rs2v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 100
+}
+}
+group "AS-MSFTv4" {
+	remote-as 8075
+	neighbor 206.81.80.30 {
+		descr "MSFT_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 2000
+}
+	neighbor 206.81.80.68 {
+		descr "MSFT_rs2v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 2000
+}
+}
+group "AS-OpenDNSv4" {
+	remote-as 36692
+	neighbor 206.81.80.53 {
+		descr "OpenDNS_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 200
+}
+}
+group "AS-SPLv4" {
+	remote-as 21525
+	neighbor 206.81.80.196 {
+		descr "SPL_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 10
+}
+}
+group "AS-TWITTERv4" {
+	remote-as 13414
+	neighbor 206.81.81.31 {
+		descr "TWITTER_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 200
+}
+}
+group "AS-VRISIGNv4" {
+	remote-as 7342
+	neighbor 206.81.80.133 {
+		descr "VRISIGN_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 600
+}
+}
+group "AS-YAHOOv4" {
+	remote-as 10310
+	neighbor 206.81.80.98 {
+		descr "YAHOO_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 2000
+}
+	neighbor 206.81.81.50 {
+		descr "YAHOO_rs2v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 2000
+}
+}
+group "AS-INTEGRAv4" {
+	remote-as 7385
+	neighbor 206.81.80.102 {
+		descr "INTEGRA_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 2000
+}
+}
+group "AS-PNWGPv4" {
+	remote-as 101
+	neighbor 206.81.80.84 {
+		descr "PNWGP_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 500
+}
+}
+group "AS-WAVEv4" {
+	remote-as 11404
+	neighbor 206.81.80.56 {
+		descr "WAVE_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 6000
+}
+}
+group "AS-AMAZONv4" {
+	remote-as 16509
+	neighbor 206.81.80.147 {
+		descr "AMAZON_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 4000
+}
+	neighbor 206.81.80.248 {
+		descr "AMAZON_rs2v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 4000
+}
+}
+group "AS-SYMTECv4" {
+	remote-as 27471
+	neighbor 206.81.81.169 {
+		descr "SYMTEC_rs1v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 40
+}
+	neighbor 206.81.81.170 {
+		descr "SYMTEC_rs2v4"
+		announce self
+		local-address 206.81.81.158
+		max-prefix 40
+}
+}
+
+#### IPv6 neighbors ####
+group "AS-WOWRACK-Transit-v6" {
+	remote-as 23033
+	neighbor 2607:F8F8:2F0:811:2::1 {
+		descr "WOW_trans_rs1v6"
+		announce self
+		local-address 2607:F8F8:2F0:811:2::2
+		max-prefix 100000
+}
+}
+group "AS-SIXRSv6" {
+	remote-as 33108
+	neighbor 2001:504:16::2 {
+		descr "SIXRS_rs2v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		enforce neighbor-as no
+		max-prefix 60000
+}
+	neighbor 2001:504:16::3 {
+		descr "SIXRS_rs3v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		enforce neighbor-as no
+		max-prefix 60000
+}
+}
+group "AS-HURRICANEv6" {
+	remote-as 6939
+	neighbor 2001:504:16::1b1b {
+		descr "HE_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 41000
+}
+}
+group "AS-ALTOPIAv6" {
+	remote-as 6456
+	neighbor 2001:504:16::1938 {
+		descr "ALT_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 20 restart 30
+}
+	neighbor 2001:504:16::297:0:1938 {
+		descr "ALT_rs2v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 20 restart 30
+}
+}
+group "AS-POCKETINETv6" {
+	remote-as 23265
+	neighbor 2001:504:16::5ae1 {
+		descr "POK_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 600
+}
+}
+group "AS-DOOFv6" {
+	remote-as 395823
+	neighbor 2001:504:16::6:a2f {
+		descr "DOOF_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 5
+}
+}
+group "AS-PCHv6" {
+	remote-as 3856
+	neighbor 2001:504:16::f10 {
+		descr "PCH_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 600
+}
+}
+group "AS-PCHWNv6" {
+	remote-as 42
+	neighbor 2001:504:16::2a {
+		descr "PCHWN_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 600
+}
+}
+group "AS-WOBv6" {
+	remote-as 64241
+	neighbor 2001:504:16::faf1 {
+		descr "WOB_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 5
+}
+}
+group "AS-GOOGv6" {
+	remote-as 15169
+	neighbor 2001:504:16::3b41 {
+		descr "GOOG_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 750
+}
+}
+group "AS-MISAKAv6" {
+	remote-as 57695
+	neighbor 2001:504:16::e15f {
+		descr "MISAKA_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 150
+}
+}
+group "AS-RISUPv6" {
+	remote-as 16652
+	neighbor 2001:504:16::410c {
+		descr "RISUP_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 10
+}
+}
+group "AS-AKAMAIv6" {
+	remote-as 20940
+	neighbor 2001:504:16::51cc {
+		descr "AKAMAI_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 40
+}
+}
+group "AS-CLDFLRv6" {
+	remote-as 13335
+	neighbor 2001:504:16::3417 {
+		descr "CLDFLR_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 200
+}
+}
+group "AS-DYNv6" {
+	remote-as 33517
+	neighbor 2001:504:16::82ed {
+		descr "DYN_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 200
+}
+}
+group "AS-FCBKv6" {
+	remote-as 32934
+	neighbor 2001:504:16::80a6 {
+		descr "FCBK_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 200
+}
+	neighbor 2001:504:16::211:0:80a6 {
+		descr "FCBK_rs2v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 200
+}
+}
+group "AS-GITHUBv6" {
+	remote-as 36459
+	neighbor 2001:504:16::8e6b {
+		descr "GITHUB_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 20
+}
+	neighbor 2001:504:16::346:0:8e6b {
+		descr "GITHUB_rs2v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 20
+}
+}
+group "AS-MSFTv6" {
+	remote-as 8075
+	neighbor 2001:504:16::1f8b {
+		descr "MSFT_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 500
+}
+	neighbor 2001:504:16::68:0:1f8b {
+		descr "MSFT_rs2v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 500
+}
+}
+group "AS-OpenDNSv6" {
+	remote-as 36692
+	neighbor 2001:504:16::8f54 {
+		descr "OpenDNS_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 40
+}
+}
+group "AS-SPLv6" {
+	remote-as 21525
+	neighbor 2001:504:16::5415 {
+		descr "SPL_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 10
+}
+}
+group "AS-TWITTERv6" {
+	remote-as 13414
+	neighbor 2001:504:16::3466 {
+		descr "TWITTER_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 10
+}
+}
+group "AS-VRISIGNv6" {
+	remote-as 7342
+	neighbor 2001:504:16::1cae {
+		descr "VRISIGN_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 100
+}
+}
+group "AS-YAHOOv6" {
+	remote-as 10310
+	neighbor 2001:504:16::2846 {
+		descr "YAHOO_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 200
+}
+	neighbor 2001:504:16::306:0:2846 {
+		descr "YAHOO_rs2v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 200
+}
+}
+group "AS-INTEGRAv6" {
+	remote-as 7385
+	neighbor 2001:504:16::1cd9 {
+		descr "INTEGRA_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 100
+}
+}
+group "AS-PNWGPv6" {
+	remote-as 101
+	neighbor 2001:504:16::65 {
+		descr "PNWGP_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 20
+}
+}
+group "AS-WAVEv6" {
+	remote-as 11404
+	neighbor 2001:504:16::2c8c {
+		descr "WAVE_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 500
+}
+}
+group "AS-AMAZONv6" {
+	remote-as 16509
+	neighbor 2001:504:16::407d {
+		descr "AMAZON_rs1v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 1000
+}
+	neighbor 2001:504:16::248:0:407d {
+		descr "AMAZON_rs2v6"
+		announce self
+		local-address 2001:504:16::6:cdb
+		max-prefix 1000
+}
+}
+
+#### Filtering Rules ####
+
+deny from any
+deny to any
+
+# https://www.arin.net/announcements/2014/20140130.html
+# This block will be subject to a minimum size allocation of /28 and a
+# maximum size allocation of /24. ARIN should use sparse allocation when
+# possible within that /10 block.
+allow from any prefix 23.128.0.0/10 prefixlen 24 - 28   # ARIN IPv6 transition
+
+## IPv4 ##
+# WOW_trans_rs1v4
+allow from 216.176.186.129
+allow to 216.176.186.129
+# SIXRS_rs2v4
+allow from 206.81.80.2 inet prefixlen 8 - 24
+allow to 206.81.80.2 inet prefixlen 8 - 24
+# SIXRS_rs3v4
+allow from 206.81.80.3 inet prefixlen 8 - 24
+allow to 206.81.80.3 inet prefixlen 8 - 24
+# HE_rs1v4
+allow from 206.81.80.40
+allow to 206.81.80.40
+# ALT_rs1v4
+allow from 206.81.80.10 inet prefixlen 8 - 24
+allow to 206.81.80.10 inet prefixlen 8 - 24
+# ALT_rs2v4
+allow from 206.81.81.41 inet prefixlen 8 - 24
+allow to 206.81.81.41 inet prefixlen 8 - 24
+# POK_rs1v4
+allow from 206.81.80.88 inet prefixlen 8 - 24
+allow to 206.81.80.88 inet prefixlen 8 - 24
+# DOOF_rs1v4
+allow from 206.81.81.125 inet prefixlen 8 - 24
+allow to 206.81.81.125 inet prefixlen 8 - 24
+# PCH_rs1v4
+allow from 206.81.80.81 inet prefixlen 8 - 24
+allow to 206.81.80.81 inet prefixlen 8 - 24
+# PCHWN_rs1v4
+allow from 206.81.80.80 inet prefixlen 8 - 24
+allow to 206.81.80.80 inet prefixlen 8 - 24
+# WOB_rs1v4
+allow from 206.81.81.87 inet prefixlen 8 - 24
+allow to 206.81.81.87 inet prefixlen 8 - 24
+# GOOG_rs1v4
+allow from 206.81.80.17
+allow to 206.81.80.17
+# MISAKA_rs1v4
+allow from 206.81.81.161 inet prefixlen 8 - 24
+allow to 206.81.81.161 inet prefixlen 8 - 24
+# RISUP_rs1v4
+allow from 206.81.81.74 inet prefixlen 8 - 24
+allow to 206.81.81.74 inet prefixlen 8 - 24
+# AKAMAI_rs1v4
+allow from 206.81.80.113 inet prefixlen 8 - 24
+allow to 206.81.80.113 inet prefixlen 8 - 24
+# CoSIT_rs1v4
+allow from 206.81.80.202 inet prefixlen 8 - 24
+allow to 206.81.80.202 inet prefixlen 8 - 24
+# CLDFLR_rs1v4
+allow from 206.81.81.10 inet prefixlen 8 - 24
+allow to 206.81.81.10 inet prefixlen 8 - 24
+# DYN_rs1v4
+allow from 206.81.81.121 inet prefixlen 8 - 24
+allow to 206.81.81.121 inet prefixlen 8 - 24
+# FCBK_rs1v4
+allow from 206.81.80.181 inet prefixlen 8 - 24
+allow to 206.81.80.181 inet prefixlen 8 - 24
+# FCBK_rs2v4
+allow from 206.81.80.211 inet prefixlen 8 - 24
+allow to 206.81.80.211 inet prefixlen 8 - 24
+# GITHUB_rs1v4
+allow from 206.81.81.89 inet prefixlen 8 - 24
+allow to 206.81.81.89 inet prefixlen 8 - 24
+# GITHUB_rs2v4
+allow from 206.81.81.90 inet prefixlen 8 - 24
+allow to 206.81.81.90 inet prefixlen 8 - 24
+# MSFT_rs1v4
+allow from 206.81.80.30 inet prefixlen 8 - 24
+allow to 206.81.80.30 inet prefixlen 8 - 24
+# MSFT_rs2v4
+allow from 206.81.80.68 inet prefixlen 8 - 24
+allow to 206.81.80.68 inet prefixlen 8 - 24
+# OpenDNS_rs1v4
+allow from 206.81.80.53 inet prefixlen 8 - 24
+allow to 206.81.80.53 inet prefixlen 8 - 24
+# SPL_rs1v4
+allow from 206.81.80.196 inet prefixlen 8 - 24
+allow to 206.81.80.196 inet prefixlen 8 - 24
+# TWITTER_rs1v4
+allow from 206.81.81.31 inet prefixlen 8 - 24
+allow to 206.81.81.31 inet prefixlen 8 - 24
+# VRISIGN_rs1v4
+allow from 206.81.80.133 inet prefixlen 8 - 24
+allow to 206.81.80.133 inet prefixlen 8 - 24
+# YAHOO_rs1v4
+allow from 206.81.80.98 inet prefixlen 8 - 24
+allow to 206.81.80.98 inet prefixlen 8 - 24
+# YAHOO_rs2v4
+allow from 206.81.81.50 inet prefixlen 8 - 24
+allow to 206.81.81.50 inet prefixlen 8 - 24
+# INTEGRA_rs1v4
+allow from 206.81.80.102 inet prefixlen 8 - 24
+allow to 206.81.80.102 inet prefixlen 8 - 24
+# PNWGP_rs1v4
+allow from 206.81.80.84 inet prefixlen 8 - 24
+allow to 206.81.80.84 inet prefixlen 8 - 24
+# WAVE_rs1v4
+allow from 206.81.80.56 inet prefixlen 8 - 24
+allow to 206.81.80.56 inet prefixlen 8 - 24
+# AMAZON_rs1v4
+allow from 206.81.80.147 inet prefixlen 8 - 24
+allow to 206.81.80.147 inet prefixlen 8 - 24
+# AMAZON_rs2v4
+allow from 206.81.80.248 inet prefixlen 8 - 24
+allow to 206.81.80.248 inet prefixlen 8 - 24
+# SYMTEC_rs1v4
+allow from 206.81.81.169 inet prefixlen 8 - 24
+allow to 206.81.81.169 inet prefixlen 8 - 24
+# SYMTEC_rs2v4
+allow from 206.81.81.170 inet prefixlen 8 - 24
+allow to 206.81.81.170 inet prefixlen 8 - 24
+
+## IPv6 ##
+# WOW_trans_rs1v6
+allow from 2607:F8F8:2F0:811:2::1
+allow to 2607:F8F8:2F0:811:2::1
+# SIXRS_rs2v6
+allow from 2001:504:16::2 inet6 prefixlen 16 - 48
+allow to 2001:504:16::2 inet6 prefixlen 16 - 48
+# SIXRS_rs3v6
+allow from 2001:504:16::3 inet6 prefixlen 16 - 48
+allow to 2001:504:16::3 inet6 prefixlen 16 - 48
+# HE_rs1v6
+allow from 2001:504:16::1b1b
+allow to 2001:504:16::1b1b
+# ALT_rs1v6
+allow from 2001:504:16::1938 inet6 prefixlen 16 - 48
+allow to 2001:504:16::1938 inet6 prefixlen 16 - 48
+# ALT_rs2v6
+allow from 2001:504:16::297:0:1938 inet6 prefixlen 16 - 48
+allow to 2001:504:16::297:0:1938 inet6 prefixlen 16 - 48
+# POK_rs1v6
+allow from 2001:504:16::5ae1 inet6 prefixlen 16 - 48
+allow to 2001:504:16::5ae1 inet6 prefixlen 16 - 48
+# DOOF_rs1v6
+allow from 2001:504:16::6:a2f inet6 prefixlen 16 - 48
+allow to 2001:504:16::6:a2f inet6 prefixlen 16 - 48
+# PCH_rs1v6
+allow from 2001:504:16::f10 inet6 prefixlen 16 - 48
+allow to 2001:504:16::f10 inet6 prefixlen 16 - 48
+# PCHWN_rs1v6
+allow from 2001:504:16::2a inet6 prefixlen 16 - 48
+allow to 2001:504:16::2a inet6 prefixlen 16 - 48
+# WOB_rs1v6
+allow from 2001:504:16::faf1 inet6 prefixlen 16 - 48
+allow to 2001:504:16::faf1 inet6 prefixlen 16 - 48
+# GOOG_rs1v6
+allow from 2001:504:16::3b41
+allow to 2001:504:16::3b41
+# MISAKA_rs1v6
+allow from 2001:504:16::e15f inet6 prefixlen 16 - 48
+allow to 2001:504:16::e15f inet6 prefixlen 16 - 48
+# RISUP_rs1v6
+allow from 2001:504:16::410c inet6 prefixlen 16 - 48
+allow to 2001:504:16::410c inet6 prefixlen 16 - 48
+# AKAMAI_rs1v6
+allow from 2001:504:16::51cc inet6 prefixlen 16 - 48
+allow to 2001:504:16::51cc inet6 prefixlen 16 - 48
+# CLDFLR_rs1v6
+allow from 2001:504:16::3417 inet6 prefixlen 16 - 48
+allow to 2001:504:16::3417 inet6 prefixlen 16 - 48
+# DYN_rs1v6
+allow from 2001:504:16::82ed inet6 prefixlen 16 - 48
+allow to 2001:504:16::82ed inet6 prefixlen 16 - 48
+# FCBK_rs1v6
+allow from 2001:504:16::80a6 inet6 prefixlen 16 - 48
+allow to 2001:504:16::80a6 inet6 prefixlen 16 - 48
+# FCBK_rs2v6
+allow from 2001:504:16::211:0:80a6 inet6 prefixlen 16 - 48
+allow to 2001:504:16::211:0:80a6 inet6 prefixlen 16 - 48
+# GITHUB_rs1v6
+allow from 2001:504:16::8e6b inet6 prefixlen 16 - 48
+allow to 2001:504:16::8e6b inet6 prefixlen 16 - 48
+# GITHUB_rs2v6
+allow from 2001:504:16::346:0:8e6b inet6 prefixlen 16 - 48
+allow to 2001:504:16::346:0:8e6b inet6 prefixlen 16 - 48
+# MSFT_rs1v6
+allow from 2001:504:16::1f8b inet6 prefixlen 16 - 48
+allow to 2001:504:16::1f8b inet6 prefixlen 16 - 48
+# MSFT_rs2v6
+allow from 2001:504:16::68:0:1f8b inet6 prefixlen 16 - 48
+allow to 2001:504:16::68:0:1f8b inet6 prefixlen 16 - 48
+# OpenDNS_rs1v6
+allow from 2001:504:16::8f54 inet6 prefixlen 16 - 48
+allow to 2001:504:16::8f54 inet6 prefixlen 16 - 48
+# SPL_rs1v6
+allow from 2001:504:16::5415 inet6 prefixlen 16 - 48
+allow to 2001:504:16::5415 inet6 prefixlen 16 - 48
+# TWITTER_rs1v6
+allow from 2001:504:16::3466 inet6 prefixlen 16 - 48
+allow to 2001:504:16::3466 inet6 prefixlen 16 - 48
+# VRISIGN_rs1v6
+allow from 2001:504:16::1cae inet6 prefixlen 16 - 48
+allow to 2001:504:16::1cae inet6 prefixlen 16 - 48
+# YAHOO_rs1v6
+allow from 2001:504:16::2846 inet6 prefixlen 16 - 48
+allow to 2001:504:16::2846 inet6 prefixlen 16 - 48
+# YAHOO_rs2v6
+allow from 2001:504:16::306:0:2846 inet6 prefixlen 16 - 48
+allow to 2001:504:16::306:0:2846 inet6 prefixlen 16 - 48
+# INTEGRA_rs1v6
+allow from 2001:504:16::1cd9 inet6 prefixlen 16 - 48
+allow to 2001:504:16::1cd9 inet6 prefixlen 16 - 48
+# PNWGP_rs1v6
+allow from 2001:504:16::65 inet6 prefixlen 16 - 48
+allow to 2001:504:16::65 inet6 prefixlen 16 - 48
+# WAVE_rs1v6
+allow from 2001:504:16::2c8c inet6 prefixlen 16 - 48
+allow to 2001:504:16::2c8c inet6 prefixlen 16 - 48
+# AMAZON_rs1v6
+allow from 2001:504:16::407d inet6 prefixlen 16 - 48
+allow to 2001:504:16::407d inet6 prefixlen 16 - 48
+# AMAZON_rs2v6
+allow from 2001:504:16::248:0:407d inet6 prefixlen 16 - 48
+allow to 2001:504:16::248:0:407d inet6 prefixlen 16 - 48
+
+# filter bogus networks according to RFC5735
+deny from any prefix 0.0.0.0/8 prefixlen >= 8           # 'this' network [RFC1122]
+deny from any prefix 10.0.0.0/8 prefixlen >= 8          # private space [RFC1918]
+deny from any prefix 100.64.0.0/10 prefixlen >= 10      # CGN Shared [RFC6598]
+deny from any prefix 127.0.0.0/8 prefixlen >= 8         # localhost [RFC1122]
+deny from any prefix 169.254.0.0/16 prefixlen >= 16     # link local [RFC3927]
+deny from any prefix 172.16.0.0/12 prefixlen >= 12      # private space [RFC1918]
+deny from any prefix 192.0.2.0/24 prefixlen >= 24       # TEST-NET-1 [RFC5737]
+deny from any prefix 192.168.0.0/16 prefixlen >= 16     # private space [RFC1918]
+deny from any prefix 198.18.0.0/15 prefixlen >= 15      # benchmarking [RFC2544]
+deny from any prefix 198.51.100.0/24 prefixlen >= 24    # TEST-NET-2 [RFC5737]
+deny from any prefix 203.0.113.0/24 prefixlen >= 24     # TEST-NET-3 [RFC5737]
+deny from any prefix 224.0.0.0/4 prefixlen >= 4         # multicast
+deny from any prefix 240.0.0.0/4 prefixlen >= 4         # reserved
+
+# filter bogus IPv6 networks according to IANA
+deny from any prefix ::/8 prefixlen >= 8
+deny from any prefix 0100::/64 prefixlen >= 64          # Discard-Only [RFC6666]
+deny from any prefix 2001:2::/48 prefixlen >= 48        # BMWG [RFC5180]
+deny from any prefix 2001:10::/28 prefixlen >= 28       # ORCHID [RFC4843]
+deny from any prefix 2001:db8::/32 prefixlen >= 32      # docu range [RFC3849]
+deny from any prefix 3ffe::/16 prefixlen >= 16          # old 6bone
+deny from any prefix fc00::/7 prefixlen >= 7            # unique local unicast
+deny from any prefix fe80::/10 prefixlen >= 10          # link local unicast
+deny from any prefix fec0::/10 prefixlen >= 10          # old site local unicast
+deny from any prefix ff00::/8 prefixlen >= 8            # multicast
+```   
 
 Updated 9/5/2017
 
 We'll update this as we make changes.
 
-
 # External Resources
-
 
 Here are a few references we leveraged when building our config:
 
-
-
- 	
-  * [https://man.openbsd.org/bgpd.conf](https://man.openbsd.org/bgpd.conf)
-
- 	
-  * [https://www.seattleix.net/faq#config](https://www.seattleix.net/faq#config)
-
- 	
-  * [https://www.seattleix.net/route-servers](https://www.seattleix.net/route-servers)
-
- 	
-  * [https://www.ssi.gouv.fr/uploads/2016/03/bgp-configuration-best-practices.pdf](https://www.ssi.gouv.fr/uploads/2016/03/bgp-configuration-best-practices.pdf)
-
- 	
-  * [https://www.space.net/~gert/RIPE/ipv6-filters.html](https://www.space.net/~gert/RIPE/ipv6-filters.html)
-
+* [https://man.openbsd.org/bgpd.conf](https://man.openbsd.org/bgpd.conf)
+* [https://www.seattleix.net/faq#config](https://www.seattleix.net/faq#config)
+* [https://www.seattleix.net/route-servers](https://www.seattleix.net/route-servers)
+* [https://www.ssi.gouv.fr/uploads/2016/03/bgp-configuration-best-practices.pdf](https://www.ssi.gouv.fr/uploads/2016/03/bgp-configuration-best-practices.pdf)
+* [https://www.space.net/~gert/RIPE/ipv6-filters.html](https://www.space.net/~gert/RIPE/ipv6-filters.html)
 
 RIRs:
 
-African Network Information Center (AFRINIC) for Africa
+* African Network Information Center (AFRINIC) for Africa: 
 [https://www.afrinic.net/](https://www.afrinic.net/)
-
-American Registry for Internet Numbers (ARIN) for the United States, Canada, several parts of the Caribbean region, and Antarctica.
+* American Registry for Internet Numbers (ARIN) for the United States, Canada, several parts of the Caribbean region, and Antarctica: 
 [https://www.arin.net/](https://www.arin.net/)
-
-Asia-Pacific Network Information Centre (APNIC) for Asia, Australia, New Zealand, and neighboring countries
+* Asia-Pacific Network Information Centre (APNIC) for Asia, Australia, New Zealand, and neighboring countries: 
 [https://www.apnic.net/](https://www.apnic.net/)
-
-Latin America and Caribbean Network Information Centre (LACNIC) for Latin America and parts of the Caribbean region
+* Latin America and Caribbean Network Information Centre (LACNIC) for Latin America and parts of the Caribbean region: 
 [https://www.lacnic.net/](https://www.lacnic.net/)
-
-Réseaux IP Européens Network Coordination Centre (RIPE) for Europe, Russia, the Middle East, and Central Asia
+* Réseaux IP Européens Network Coordination Centre (RIPE) for Europe, Russia, the Middle East, and Central Asia: 
 [https://www.ripe.net/](https://www.ripe.net/)

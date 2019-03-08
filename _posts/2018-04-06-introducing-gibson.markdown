@@ -10,17 +10,13 @@ tags:
 - Infrastructure
 ---
 
-[caption id="attachment_745" align="aligncenter" width="1600"]![](/images/Outline-Long.jpg) Artwork by Mike Finch (CC BY 4.0)[/caption]
-
-
+![Artwork by Mike Finch (CC BY 4.0)](/images/Outline-Long.jpg)
 
 As you may know, Emerald Onion systems run [HardenedBSD](https://hardenedbsd.org/). BSD systems in general, and HBSD in particular, provide numerous advantages to our team in operating secure and highly performant Tor relays. But BSD systems make up only a very small percentage of the Tor network. There are many similarities between BSD and Linux, with which many users may be more familiar, but the differences can be intimidating. We’re addressing this by launching gibson, a project to develop a suite of tools to address the needs of Tor service operators. The Tor network is more robust when it is diverse, and this is one way that we can encourage a more diverse Tor network and enhance our community.
 
 It is important to say that while our initial focus is on BSD systems, our plan is to extend gibson to serve the Tor community regardless of platform. We’re starting with HBSD because it’s an obvious and natural choice for us; we believe in "[dogfood](https://en.wikipedia.org/wiki/Eating_your_own_dog_food)", and we want you to be assured that the code we share is used by our team in real deployments. In our mind it isn’t enough to make running Tor services easy, our tools must also help make services secure and reliable. At Emerald Onion, we do this by example.
 
-
 # What is gibson?
-
 
 A generous description is that gibson is a no-dependency suite of cross-functional tools for creating and maintaining secure and robust Tor services. We currently support HardenedBSD systems, but plan to extend our support to FreeBSD, OpenBSD, and Linux in future releases.
 
@@ -32,122 +28,53 @@ We also believe that users should be able to adopt gibson on existing systems wi
 
 Finally, we say that gibson is cross-functional because our solution space is defined by the needs of a secure and robust Tor deployment. We do not seek to replace virtualization and jail tools (for instance, bhyve, virtualbox, ezjail, iocell, etc.). We do not seek to replace disk encryption tools (geli, LUKS, etc.). We’re not replacing any web servers, either (nginx, Apache, Caddy, etc.). What we are doing is providing tools to streamline the implementation of these other projects into a complete solution which addresses the needs of Tor administrators.
 
-
 # What does gibson do now?
 
-
 Currently, gibson updates and controls Tor services running in HBSD jails. A simple and mundane task, but one that we want to make sure is done consistently during each of our maintenance windows. Our initial release of gibson is version 0.1, which is derived from a handful of scripts currently used in maintenance of Emerald Onion systems.
-
-
-
  	
-  * 0.0.1 Initial scripts used for EmeraldOnion system maintenance
-
- 	
-  * 0.1.0 First version 0.0.1 scripts refactored into gibson: apply system and package updates in jails; start, stop, restart tor services in jails;
-
-
-
+* 0.0.1 Initial scripts used for EmeraldOnion system maintenance
+* 0.1.0 First version 0.0.1 scripts refactored into gibson: apply system and package updates in jails; start, stop, restart tor services in jails;
 
 # Where can I get gibson?
 
+We're working on getting gibson into the HardenedBSD ports repository, and it should land there shortly. It will take a little more time for binary packages to become available for users who prefer to use pkg.
 
-We're working on getting gibson into the HardenedBSD ports repository, and it should land there shortly.  It will take a little more time for binary packages to become available for users who prefer to use pkg.
-
-In the meantime, gibson is available [at our GitHub](https://github.com/emeraldonion/gibson), as is the files you need to sideload it as a port.  Detailed installation instructions are available there.
-
+In the meantime, gibson is available [at our GitHub](https://github.com/emeraldonion/gibson), as is the files you need to sideload it as a port. Detailed installation instructions are available there.
 
 # Roadmap (or: what will gibson do in the future?)
 
-
-
-
 ## 0.2 -> 0.5
 
-
-
-
-
- 	
-  * Create and maintain template jail(s); clone templates into new jails and deploy tor services:
-
- 	
-    * middle relays
-
- 	
-    * exit relays
-
- 	
-    * bridges
-
- 	
-    * onion services (with nginix, initially)
-
-
-
-
- 	
-  * Create and manage geli-encrypted ZFS pools
-
- 	
-  * Initial creation of encrypted providers and pool members from specified devices
-
- 	
-  * Replacement of devices due to failure or capacity expansion
-
- 	
-  * Good ideas suggested (or implemented and submitted) by our community!
-
-
-
+* Create and maintain template jail(s); clone templates into new jails and deploy tor services:
+* middle relays
+* exit relays
+* bridges
+* onion services (with nginix, initially)
+* Create and manage geli-encrypted ZFS pools
+* Initial creation of encrypted providers and pool members from specified devices
+* Replacement of devices due to failure or capacity expansion
+* Good ideas suggested (or implemented and submitted) by our community!
 
 ## 0.6 -> 0.9
 
-
-
-
-
- 	
-  * Support for FreeBSD systems
-
- 	
-  * Good ideas suggested (or implemented and submitted) by our community!
-
-
-
+* Support for FreeBSD systems
+* Good ideas suggested (or implemented and submitted) by our community!
 
 ## 1.5+
 
-
-
-
-
- 	
-  * Support for Linux systems
-
- 	
-  * Support for non-geli encrypted filesystems
-
- 	
-  * Support for non-ZFS storage pools
-
- 	
-  * Good ideas suggested (or implemented and submitted) by our community!
-
-
-
+* Support for Linux systems
+* Support for non-geli encrypted filesystems
+* Support for non-ZFS storage pools
+* Good ideas suggested (or implemented and submitted) by our community!
 
 # House Style
 
-
 gibson is always written in all-lowercase.
-
 
 # Logo
 
-
 The gibson logo was generously donated by [Mike Finch](https://twitter.com/mkfnch) and is licensed by Emerald Onion as [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
-[![](/images/Outline-Short-300x300.jpg)](/images/Outline-Short.jpg)
+![](/images/Outline-Short.jpg)
 
-[![](/images/Outline-Long-300x98.jpg)](/images/Outline-Long.jpg)
+![](/images/Outline-Long.jpg)

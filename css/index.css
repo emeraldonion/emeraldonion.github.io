@@ -73,7 +73,13 @@ sup {
 }
 
 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-style: none;
+  max-width: 100%;
+  height: auto;
+  
 }
 
 button,input,optgroup,select,textarea {
