@@ -659,6 +659,10 @@ footer {
 	order: 2;
 }
 
+.transparency-docs img {
+  display: inline-block;
+}
+
 /* Extra-Small Devices */
 @media (max-width: 375px) {
 	.hide-when-large {
