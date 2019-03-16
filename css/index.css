@@ -509,7 +509,9 @@ pre {
 	font-size: 0.9375rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
-	max-width: 100%;
+	max-width: 95%;
+	margin-left: auto;
+	margin-right: auto;
 	overflow: auto;
 	padding: 1.6em;
 }
@@ -692,17 +694,19 @@ footer {
 @media (max-width: 691px) {
 	.site-description {
 		display: none;
-    }
+  }
 }
 
 /* Medium Devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  
+  pre {
+	  max-width: 70%;
+	}
 }
 
 /* Large Devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    
+  
 }
 
 /* Extra-Large Devices (large desktops, 1200px and up) */
@@ -711,5 +715,18 @@ footer {
 		padding-left: 9em;
 		padding-right: 9em;
 	}
-    
+}
+
+/* Wide Screen Devices (wide screens, 1600px and up) */
+@media (min-width: 1600px){
+  pre {
+    max-width: 55%;
+  }
+}
+
+/* Extra-Wide Screen Devices (wide screens, 1800px and up) */
+@media(min-width: 1800px){
+  pre {
+    max-width: 40%;
+  }
 }
