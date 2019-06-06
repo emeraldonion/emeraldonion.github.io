@@ -1,57 +1,45 @@
----
-author: emeraldonion
-comments: false
-date: 2018-03-26 13:30:01+00:00
-layout: default
-link: https://emeraldonion.org/transparency/
-slug: transparency
-title: Transparency
-wordpress_id: 637
----
+Date: 2019 June 05
 
-Date: 2018 March 26
+<br />This is Emerald Onion’s transparency report for the period of 2017-July-2 through 2019-June-05.
 
-This is Emerald Onion’s transparency report for the period of 2017-July-2 through 2018-March-25.
+<br />Emerald Onion is not being prevented from disclosing any information.
+<br />Emerald Onion is not being made to change any information.
 
-Emerald Onion is not being prevented from disclosing any information.
-Emerald Onion is not being made to change any information.
+<br />Emerald Onion has received 2 requests for user data.
+<br />Emerald Onion has responded to 2 requests for user data.
+<br />Emerald Onion was unable to comply with 2 requests for user data.
 
-Emerald Onion has received 2 requests for user data.
-Emerald Onion has responded to 2 requests for user data.
-Emerald Onion was unable to comply with 2 requests for user data.
+<br />Emerald Onion has not received any warrants.
+<br />Emerald Onion has not responded to any warrants.
+<br />Emerald Onion has not complied with any warrants.
 
-Emerald Onion has not received any warrants.
-Emerald Onion has not responded to any warrants.
-Emerald Onion has not complied with any warrants.
+<br />Emerald Onion has received 2 subpoenas.
+<br />Emerald Onion has responded to 2 subpoenas.
+<br />Emerald Onion was unable to comply with 2 subpoenas.
 
-Emerald Onion has received 2 subpoenas.
-Emerald Onion has responded to 2 subpoenas.
-Emerald Onion was unable to comply with 2 subpoenas.
+<br />Emerald Onion has not received any National Security Letters.
+<br />Emerald Onion has not responded to any National Security Letters.
+<br />Emerald Onion has not complied with any National Security Letters.
 
-Emerald Onion has not received any National Security Letters.
-Emerald Onion has not responded to any National Security Letters.
-Emerald Onion has not complied with any National Security Letters.
+<br />Emerald Onion has not received any U.S. Code 2703(d) orders.
+<br />Emerald Onion has not responded to any U.S. Code 2703(d) orders.
+<br />Emerald Onion has not complied with any U.S. Code 2703(d) orders.
 
-Emerald Onion has not received any U.S. Code 2703(d) orders.
-Emerald Onion has not responded to any U.S. Code 2703(d) orders.
-Emerald Onion has not complied with any U.S. Code 2703(d) orders.
+<br />Emerald Onion has not received any U.S. Code Title III Wiretap orders.
+<br />Emerald Onion has not responded to any U.S. Code Title III Wiretap orders.
+<br />Emerald Onion has not complied with any U.S. Code Title III Wiretap orders.
 
-Emerald Onion has not received any U.S. Code Title III Wiretap orders.
-Emerald Onion has not responded to any U.S. Code Title III Wiretap orders.
-Emerald Onion has not complied with any U.S. Code Title III Wiretap orders.
+<br />Emerald Onion has not received any Foreign Intelligence Surveillance Act Pen Register/Trap and Trace (PR/TT) orders.
+<br />Emerald Onion has not responded to any Foreign Intelligence Surveillance Act Pen Register/Trap and Trace (PR/TT) orders.
+<br />Emerald Onion has not complied with any Foreign Intelligence Surveillance Act Pen Register/Trap and Trace (PR/TT) orders.
 
-Emerald Onion has not received any Foreign Intelligence Surveillance Act Pen Register/Trap and Trace (PR/TT) orders.
-Emerald Onion has not responded to any Foreign Intelligence Surveillance Act Pen Register/Trap and Trace (PR/TT) orders.
-Emerald Onion has not complied with any Foreign Intelligence Surveillance Act Pen Register/Trap and Trace (PR/TT) orders.
+<br />Per Emerald Onion’s policy, as allowed by law, any related communications to the above communications will be published along with this transparency report.
 
-Per Emerald Onion’s policy, as allowed by law, any related communications to the above communications will be published along with this transparency report.
+<br />Sincerely,
 
-Sincerely,
-
-Christopher Sheats, Director
-Christian Severt, Director
-Will Scott, Director
-Matt McCoy, General Counsel
+<br />Christopher Sheats, Director
+<br />Will Scott, Director
+<br />Matt McCoy, General Counsel
 
 
 <section class="transparency-docs">
