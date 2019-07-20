@@ -55,4 +55,4 @@ Paul is CEO of [PreOS Security Inc](https://preossec.com/) and is a board membe
 #### Kyle Spiers ([@eiais](https://twitter.com/eiais))
 
 
-Queer platform security engineer and Chromium and Docker contributor.
+Queer platform security engineer. Chromium and Docker contributor.
