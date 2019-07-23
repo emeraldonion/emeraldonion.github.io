@@ -1,9 +1,6 @@
 Emerald Onion is a [501(c)(3) nonprofit organization](https://www.guidestar.org/profile/82-2009438) and transit internet service provider (ISP) based in Seattle, WA. Emerald Onion's mission is to protect privacy, anonymity, access to information, and free speech online. To further that mission, Emerald Onion operates high capacity, fully open Tor exit routers with connectivity to the [Seattle Internet Exchange](https://www.seattleix.net/). Emerald Onion envisions a world where access and privacy are the defaults; if we do not have human rights online, we will not have them offline, either.
 
 
-We send updates via Twitter: [@EmeraldOnion](https://twitter.com/emeraldonion)
-
-
 # Directors
 
 
@@ -19,6 +16,12 @@ We send updates via Twitter: [@EmeraldOnion](https://twitter.com/emeraldonion)
 [Will](https://wills.co.tt/) is a research fellow at the University of Michigan studying Internet security and access. His work includes [Satellite](http://satellite.cs.washington.edu), a project scanning the internet for DNS censorship, and [Onionproxy](https://github.com/willscott/onionproxy) for routing public email to location-hidden services. A Seattle native, Will's previous experiences have included teaching skiing, living in China, working on the Gmail and Jigsaw teams at Google, teaching Computer Science in Pyongyang, and playing with fire.
 
 
+#### Jake Visser ([@jakevis_](https://twitter.com/jakevis_))
+
+
+Jake is a cyber security architect living and working in Seattle. An Australian native, with a long history in government, IT security, and many forms of packet forwarding (and a couple masters degrees from the University of New South Wales to help). Jake has been involved with several not for profits, ranging from long range community wireless networks, community ISP’s to other Defcon community groups.
+
+
 #### Matt McCoy, Esq. ([@mhays_](https://twitter.com/mhays_))
 
 
@@ -32,12 +35,6 @@ Matt is an attorney in Seattle practicing in privacy and security law who advise
 
 
 Shawn is an offensive and defensive security researcher, with over a decade of experience in the field. Primarily on the defensive side, Shawn co-founded [HardenedBSD](https://hardenedbsd.org/) and sits on the core team. Shawn's most well-known offensive research is [libhijack](https://github.com/SoldierX/libhijack), a post-exploitation tool that makes runtime process infection easy on FreeBSD. An avid fan of Tor, he runs a public relay on a Raspberry Pi 3 running HardenedBSD. In fact, his home is wired for Tor. Plug in a device and all its traffic magically goes through Tor!
-
-
-#### Jake Visser ([@jakevis_](https://twitter.com/jakevis_))
-
-
-Jake is a cyber security architect living and working in Seattle. An Australian native, with a long history in government, IT security, and many forms of packet forwarding (and a couple masters degrees from the University of New South Wales to help). Jake has been involved with several not for profits, ranging from long range community wireless networks, community ISP’s to other Defcon community groups.
 
 
 #### John Brooks ([@jbrooks_](https://twitter.com/jbrooks_))
