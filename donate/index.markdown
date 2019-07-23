@@ -20,8 +20,8 @@ Your company might match donations (like if you work for Apple, Google, or Micro
 
 # Cash, Check, or Money Order
 
-<address>
-Emerald Onion
-815 1st Ave # 331
-Seattle, WA 98104-1404
-</address>
+<address>Emerald Onion
+<br />815 1st Ave # 331
+<br />Seattle, WA 98104-1404</address>
+<br />
+<br />
