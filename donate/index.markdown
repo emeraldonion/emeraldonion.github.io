@@ -6,17 +6,17 @@ If you are interested in donating or volunteering time, please contact us via Si
 
 # PayPal Giving Fund
 
-<a href="https://www.paypal.com/us/fundraiser/charity/2819730"><span id="fundraisingLink">https://www.paypal.com/us/fundraiser/charity/2819730</span></a>
+<a href="https://www.paypal.com/us/fundraiser/charity/2819730" target="_blank">https://www.paypal.com/us/fundraiser/charity/2819730</a>
 
 # Benevity
 
-Your company might match donations; particularly if you work for Apple, Google, or Microsoft.
+Your company might match donations (like if you work for Apple, Google, or Microsoft)!
 
-<a href="https://causes.benevity.org/causes/840-822009438" target="_blank" rel="noopener">https://causes.benevity.org/causes/840-822009438</a>
+<a href="https://causes.benevity.org/causes/840-822009438" target="_blank">https://causes.benevity.org/causes/840-822009438</a>
 
 # Teespring
 
-<a href="https://teespring.com/emerald-onion" target="_blank" rel="noopener">https://teespring.com/emerald-onion</a>
+<a href="https://teespring.com/emerald-onion" target="_blank">https://teespring.com/emerald-onion</a>
 
 # Cash, Check, or Money Order
 
