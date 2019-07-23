@@ -1,6 +1,6 @@
 Emerald Onion would not exist without the generosity of people, including the people behind Emerald Onion who are all volunteers. Grants and donations make up 100% of our income, and we would sincerely welcome your help. Being a tax-deductible nonprofit, we depend on grants and donations for deploying and maintaining privacy infrastructure.
 
-If you are interested in donating or volunteering time, please contact us via Signal (+1-206-739-3390), Wire (EmeraldOnion), or Email (donations at emeraldonion.org) with questions.
+If you are interested in donating time or IPv4 space, or volunteering, please contact us via Signal (+1-206-739-3390), Wire (EmeraldOnion), or Email (donations at emeraldonion.org) with questions.
 
 * * *
 
