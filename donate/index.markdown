@@ -1,4 +1,4 @@
-<p>Emerald Onion would not exist without the generosity of people, including the people behind Emerald Onion who are all volunteers. Grants and donations make up 100% of our income, and we would sincerely welcome your help. Being a tax-deductible nonprofit, we depend on grants and donations for deploying and maintaining privacy infrastructure.</p>
+<p>Emerald Onion would not exist without the generosity of people, including the people behind Emerald Onion who are all volunteers. Grants and donations make up 100% of our income, and we would sincerely welcome your help. Being a U.S. tax-deductible nonprofit, we depend on grants and donations for deploying and maintaining privacy infrastructure.</p>
 
 <p>If you are interested in donating time or IPv4 space, or volunteering, please contact us via Signal (+1-206-739-3390), Wire (EmeraldOnion), Twitter (EmeraldOnion) or Email (donations at emeraldonion.org) with questions.</p>
 
@@ -16,7 +16,7 @@ Your company might match donations (like if you work for Apple, Google, or Micro
 
 # AmazonSmile
 
-<a href="https://smile.amazon.com/hz/charitylist/ls/HK9UAWTA5YLR/ref=smi_ext_lnk_lcl_cl" target="_blank">Emerald Onion's AmazonSmile Charity List</a>
+<a href="https://smile.amazon.com/hz/charitylist/ls/HK9UAWTA5YLR/ref=smi_ext_lnk_lcl_cl" target="_blank">Emerald Onion's charity list for infrastructure in Seattle, WA, United States</a>
 
 # Teespring
 
