@@ -1,7 +1,7 @@
 Emerald Onion is a [501(c)(3) nonprofit organization](https://www.guidestar.org/profile/82-2009438) and transit internet service provider (ISP) based in Seattle, WA. Emerald Onion's mission is to protect privacy, anonymity, access to information, and free speech online. To further that mission, Emerald Onion operates high capacity, fully open Tor exit routers with connectivity to the [Seattle Internet Exchange](https://www.seattleix.net/). Emerald Onion envisions a world where access and privacy are the defaults; if we do not have human rights online, we will not have them offline, either.
 
 
-# Directors
+# Volunteer Directors
 
 
 #### Christopher Sheats ([@yawnbox](https://twitter.com/yawnbox))
@@ -28,7 +28,7 @@ Jake is a cyber security architect living and working in Seattle. An Australian 
 Matt is an attorney in Seattle practicing in privacy and security law who advises in niche technology matters such as cyberstalking, Tor exit node operation, and other information security issues. Matt has worked at places such as the FTC’s [Department of Privacy and Identity Protection](https://www.ftc.gov/about-ftc/bureaus-offices/bureau-consumer-protection/our-divisions/division-privacy-and-identity), the [ACLU of Washington](https://aclu-wa.org/), the Senate Consumer Protection and Data Security, and as a Google Policy Fellow. He helped author [State of Washington E.O. 16-01](http://www.governor.wa.gov/sites/default/files/exe_order/eo_16-01.pdf) (PDF) which created Washington’s [Office of Privacy and Data Protection](https://privacy.wa.gov/), and has worked on technology policy with federal, state, and local governments.
 
 
-# Advisory Board
+# Vlunteer Advisory Board
 
 
 #### Shawn Webb ([@lattera](https://twitter.com/lattera))
@@ -49,7 +49,7 @@ John is the lead developer of [Ricochet](https://ricochet.im), an infrastructure
 Paul is CEO of [PreOS Security Inc](https://preossec.com/) and is a board member for the [League of Professional System Administrator](https://lopsa.org/), a nonprofit professional association for the advancement of the practice of system administration from 2015 through 2017. Paul has a bachelor's degree in computer science from [Worcester Polytechnic Institute](https://www.wpi.edu/) obtained in 1998. He has been a UNIX & Linux system administrator and wearer of many other IT hats since 1996. More recently he has managed a few sysadmins while still racking the occasional server. In 2016, Paul ventured into a firmware security startup to help sysadmins keep their systems safe from new threats.
 
 
-#### Kyle Spiers ([@eiais](https://twitter.com/eiais))
+#### Kathryn Spiers ([@eiais](https://twitter.com/eiais))
 
 
 Queer platform security engineer. Chromium and Docker contributor.
