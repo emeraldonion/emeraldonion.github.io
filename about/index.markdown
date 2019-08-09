@@ -28,7 +28,7 @@ Jake is a cyber security architect living and working in Seattle. An Australian 
 Matt is an attorney in Seattle practicing in privacy and security law who advises in niche technology matters such as cyberstalking, Tor exit node operation, and other information security issues. Matt has worked at places such as the FTC’s [Department of Privacy and Identity Protection](https://www.ftc.gov/about-ftc/bureaus-offices/bureau-consumer-protection/our-divisions/division-privacy-and-identity), the [ACLU of Washington](https://aclu-wa.org/), the Senate Consumer Protection and Data Security, and as a Google Policy Fellow. He helped author [State of Washington E.O. 16-01](http://www.governor.wa.gov/sites/default/files/exe_order/eo_16-01.pdf) (PDF) which created Washington’s [Office of Privacy and Data Protection](https://privacy.wa.gov/), and has worked on technology policy with federal, state, and local governments.
 
 
-# Vlunteer Advisory Board
+# Volunteer Advisory Board
 
 
 #### Shawn Webb ([@lattera](https://twitter.com/lattera))
