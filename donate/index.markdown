@@ -10,14 +10,8 @@
 
 # Bitcoin/Litecoin/Ether
 
-<div>
-  <a class="donate-with-crypto"
-     href="https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada">
-    <span>Donate with Crypto</span>
-  </a>
-  <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-  </script>
-</div>
+<a ref="https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada" target="_blank">https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada</a>
+  
 
 # Benevity
 
