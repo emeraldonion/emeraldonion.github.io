@@ -11,9 +11,9 @@
 # Bitcoin or Ether (or other payments via BitPay)
 
 <a href="https://bitpay.com/214182/donate" target="_blank">
-<img src="https://www.bitpay.com/cdn/en_US/bitpay-mark-std.svg" alt="Pay with BitPay" width="75px" /><br />
+<img src="https://www.bitpay.com/cdn/en_US/bitpay-mark-std.svg" alt="Pay with BitPay" width="75px" />
 <img src="https://www.bitpay.com/cdn/en_US/currency-mark-std.svg" alt="BitPay Supported Currencies (BTC, BCH, ETH)" width="150px" />
-https://bitpay.com/214182/donate</a>
+<br />https://bitpay.com/214182/donate</a>
 
 # Benevity
 
