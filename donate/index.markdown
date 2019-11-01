@@ -8,11 +8,16 @@
 
 <a href="https://www.paypal.com/us/fundraiser/charity/2819730" target="_blank">https://www.paypal.com/us/fundraiser/charity/2819730</a>
 
-# Bitcoin or Ether (or other payments via BitPay)
+# Bitcoin/Litecoin/Ether
 
-<a href="https://bitpay.com/214182/donate" target="_blank">
-<img src="https://bitpay.com/cdn/en_US/bp-btn-donate-currencies.svg" alt="Donate with BitPay" width="210px" />
-<br />https://bitpay.com/214182/donate</a>
+<div>
+  <a class="donate-with-crypto"
+     href="https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada">
+    <span>Donate with Crypto</span>
+  </a>
+  <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
+  </script>
+</div>
 
 # Benevity
 
