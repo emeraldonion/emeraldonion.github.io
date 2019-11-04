@@ -8,9 +8,9 @@
 
 <a href="https://www.paypal.com/us/fundraiser/charity/2819730" target="_blank">https://www.paypal.com/us/fundraiser/charity/2819730</a>
 
-# Bitcoin/Litecoin/Ether
+# Cryptocurrencies
 
-<a ref="https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada" target="_blank">https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada</a>
+<a href="https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada" target="_blank">Coinbase</a>
   
 
 # Benevity
