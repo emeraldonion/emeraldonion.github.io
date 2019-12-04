@@ -6,12 +6,23 @@
 
 # PayPal Giving Fund
 
+This is our preferred method because we receive 100% of the donated amount (no fees!)
+
 <a href="https://www.paypal.com/us/fundraiser/charity/2819730" target="_blank">https://www.paypal.com/us/fundraiser/charity/2819730</a>
 
-# Cryptocurrencies
+# Cash, Check, or Money Order
 
-<a href="https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada" target="_blank">Coinbase</a>
-  
+<address>Emerald Onion
+<br />815 1st Ave # 331
+<br />Seattle, WA 98104-1404</address>
+
+# Cryptocurrency
+
+If you are interested in donating a significant amount or a currency not listed, please contact us to coordinate.
+
+Offline BTC wallet: 132aMUvqkfo2hHwHjAaqRdnMzw7wuD3KYd
+
+Coinbase: <a href="https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada" target="_blank">https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada</a>
 
 # Benevity
 
@@ -28,11 +39,5 @@ Your company might match donations (like if you work for Apple, Google, or Micro
 # Teespring
 
 <a href="https://teespring.com/emerald-onion" target="_blank">https://teespring.com/emerald-onion</a>
-
-# Cash, Check, or Money Order
-
-<address>Emerald Onion
-<br />815 1st Ave # 331
-<br />Seattle, WA 98104-1404</address>
 <br />
 <br />
