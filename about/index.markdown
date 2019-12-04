@@ -47,9 +47,3 @@ John is the lead developer of [Ricochet](https://ricochet.im), an infrastructure
 
 
 Paul is CEO of [PreOS Security Inc](https://preossec.com/) and is a board member for the [League of Professional System Administrator](https://lopsa.org/), a nonprofit professional association for the advancement of the practice of system administration from 2015 through 2017. Paul has a bachelor's degree in computer science from [Worcester Polytechnic Institute](https://www.wpi.edu/) obtained in 1998. He has been a UNIX & Linux system administrator and wearer of many other IT hats since 1996. More recently he has managed a few sysadmins while still racking the occasional server. In 2016, Paul ventured into a firmware security startup to help sysadmins keep their systems safe from new threats.
-
-
-#### Kathryn Spiers ([@eiais](https://twitter.com/eiais))
-
-
-Queer platform security engineer. Chromium and Docker contributor.
