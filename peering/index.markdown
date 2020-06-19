@@ -9,47 +9,34 @@ title: Peering
 wordpress_id: 282
 ---
 
-Peering with Emerald Onion is an excellent way to contribute to the Tor network! We strongly recommend peering with us if you're a member of the Seattle Internet Exchange. We can support up to symmetrical 10Gbps of Tor traffic.
+Peering with Emerald Onion is an excellent way to contribute to the Tor network! We strongly recommend peering with us if you're a member of the Seattle Internet Exchange or the Fremont Cabal Internet Exchange.
 
-What we expect:
-
-
+We have an open peering policy, and in some circumstances, we are willing to peer over tunnels. All we ask is that:
 
  	
   * Do not point default or static routes at Emerald Onion without a signed written agreement.
 
  	
-  * Keep your contact information up-to-date either with us directly or in PeeringDB.
+  * Keep your contact information up-to-date (preferably in PeeringDB).
 
 
 If you're interested, you may contact peering (at) emeraldonion.org and you can view our information in PeeringDB here:
 
 [https://as396507.peeringdb.com](https://as396507.peeringdb.com)
 
-Peering information at the Seattle Internet Exchange (1500 MTU):
+We are peering on the Seattle Internet Exchange and the Fremont Cabal Internet Exchange. Seattle Internet Exchange details:
 
     
     206.81.81.158
     2001:504:16::6:cdb
 
+Fremont Cabal Internet Exchange details:
 
-We announce the following prefixes:
+    206.80.238.80
+    2001:504:91::80
 
-    
-    23.129.64.0/24
-    2620:18c::/36
-
-
-Suggested Max Prefixes: 5
-Currently 1 v4, 1 v6
-
-
+All routes have IRR records, and are RPKI signed. Check out our current status at: [https://bgp.he.net/AS396507](https://bgp.he.net/AS396507)
 
 # Traffic Profile
 
-
-Our traffic profile is 1:1 or symmetrical.
-
-[![](/images/trafficprofile.png)](/images/trafficprofile.png)
-
-Last Updated: 9/3/2017
+Our traffic profile is symmetrical.
