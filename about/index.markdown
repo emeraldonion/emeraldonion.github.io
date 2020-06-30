@@ -52,3 +52,7 @@ Paul is CEO of [PreOS Security Inc](https://preossec.com/) and is a board membe
 
 Wilton is a FOSS, encryption, and privacy advocate in his spare time. His interest in actively running relays for the Tor network piqued in 2013 after global surveillance disclosures came to light. Wilton is particularly passionate about communicating the importance of privacy technology in everyday life in a way that is understandable and practical to the general public as well as activists and organizers working towards progressive change in an increasingly hostile surveillance state and economy.
 
+#### Nate Sales ([@natesales](https://natesales.net/))
+Nate is a student and software developer with a focus on infrastructure and security. He works on many layers of the stack but most often likes ensuring packets arrive at their intended destination and writing software to make that job easier. Nate manages the software department at [Team 1540](https://team1540.org/), building autonomous robot control code. He also enjoys Linux, BSD and radio communication.
+
+
