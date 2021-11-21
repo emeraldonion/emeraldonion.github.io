@@ -38,12 +38,6 @@ Your company might match donations (like if you work for Apple, Google, or Micro
 
 <a href="https://causes.benevity.org/causes/840-822009438" target="_blank">https://causes.benevity.org/causes/840-822009438</a>
 
-# AmazonSmile
-
-<a href="https://smile.amazon.com/hz/charitylist/ls/HK9UAWTA5YLR/ref=smi_ext_lnk_lcl_cl" target="_blank">Emerald Onion's charity list for infrastructure in Seattle, WA, United States</a>
-
-<a href="https://smile.amazon.com/hz/charitylist/ls/1PITW87JXW5AG/ref=smi_ext_lnk_lcl_cl" target="_blank">Emerald Onion's charity list for infrastructure in Montreal, Québec, Canada</a>
-
 # Teespring
 
 <a href="https://teespring.com/emerald-onion" target="_blank">https://teespring.com/emerald-onion</a>
