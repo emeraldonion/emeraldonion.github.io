@@ -14,7 +14,8 @@ This is our preferred method because we receive 100% of the donated amount (no f
 
 <address>Emerald Onion
 <br />815 1st Ave # 331
-<br />Seattle, WA 98104-1404</address>
+<br />Seattle, WA 98104-1404
+<br />United States</address>
 
 # Cryptocurrency
 
