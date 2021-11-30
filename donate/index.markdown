@@ -8,7 +8,7 @@
 
 _Donation Tier 1_: If you donate $10 or more, we will mail you 3 Emerald Onion stickers from Seattle.
 
-_Donation Tier 2_: If you donate $100 of more, we will allow you naming rights to a new, long-term middle relay (max: 40 middle relays, first come, first serve).
+_Donation Tier 2_: If you donate $100 or more, we will allow you naming rights to a new, long-term middle relay (max: 40 middle relays, first come, first serve).
 
 If your company does donation matching and you donate $50, the total donation will be $100, so we will allow you to name a new middle relay. If you donate $100 and your company matches for a total of $200, we will allow you to name 2 new middle relays, etc.
 
