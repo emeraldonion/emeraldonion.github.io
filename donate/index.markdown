@@ -14,7 +14,7 @@ If your company does donation matching and you donate $50, the total donation wi
 
 For either donation tier, forward us your donation confirmation email to donations(at)emeraldonion.org along with your complete mailing address. If you donate $100 or more, please give us a name for the new middle relay. Please note: Relay names must be 1 to 19 characters in length, only letters and numbers (a-zA-Z0-9), and no spaces or special characters. This is a limitation in the tor specification.
 
-Please contact us with any questions.
+Please contact us with any questions. This #GivingTuesday campaign will run until 2021 December 31.
 
 As of Q4 2021, all of Emerald Onion's Tor relays are hosted in downtown Seattle in the Westin data center. All relays are dual-stack IPv6/v4, run on Emerald Onion's owned and operated AMD Epyc (7402P) hardware, and run either HardenedBSD 13 or Ubuntu 20.04 server.
 
