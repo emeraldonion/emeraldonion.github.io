@@ -4,8 +4,6 @@
 
 <p>Emerald Onion is a U.S. 501(c)(3) nonprofit, tax ID #82-2009438. Contributions are tax deductible as allowed by law. Thank you!</p>
 
-As of Q4 2021, all of Emerald Onion's Tor relays are hosted in downtown Seattle in the Westin data center. All relays are dual-stack IPv6/v4, run on Emerald Onion's owned and operated AMD Epyc (7402P) hardware, and run either HardenedBSD 13 or Ubuntu 22.04 server.
-
 # PayPal Giving Fund
 
 This is our preferred method because we receive 100% of the donated amount (no fees!)
