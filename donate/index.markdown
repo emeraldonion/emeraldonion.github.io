@@ -44,3 +44,4 @@ Your company might match donations (like if you work for Apple, Google, or Micro
 <a href="https://teespring.com/emerald-onion" target="_blank">https://teespring.com/emerald-onion</a>
 <br />
 <br />
+<a rel="me" href="https://digitalcourage.social/@EmeraldOnion"></a>
