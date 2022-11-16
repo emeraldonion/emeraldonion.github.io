@@ -20,7 +20,7 @@ Date: 2022-October-31
 
 <br />Emerald Onion has received 2 [18 U.S. Code § 2703(d)](https://www.law.cornell.edu/uscode/text/18/2703) orders for user data along with 2 [18 U.S. Code § 2705(b)](https://www.law.cornell.edu/uscode/text/18/2705) gag orders.
 <br />Emerald Onion has responded to 2 [18 U.S. Code § 2703(d)](https://www.law.cornell.edu/uscode/text/18/2703) orders for user data.
-<br />Emerald Onion was unable to comply 2 [18 U.S. Code § 2703(d)](https://www.law.cornell.edu/uscode/text/18/2703) orders for user data.
+<br />Emerald Onion was unable to comply with 2 [18 U.S. Code § 2703(d)](https://www.law.cornell.edu/uscode/text/18/2703) orders for user data.
 
 <br />Emerald Onion has not received any U.S. Code Title III Wiretap orders.
 <br />Emerald Onion has not responded to any U.S. Code Title III Wiretap orders.
