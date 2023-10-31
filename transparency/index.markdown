@@ -1,6 +1,6 @@
-Date: 2023-April-30
+Date: 2023-October-31
 
-<br />This is Emerald Onion’s transparency report for the period of 2017-July-2 through 2023-April-30.
+<br />This is Emerald Onion’s transparency report for the period of 2017-July-2 through 2023-October-30.
 <br />Emerald Onion will update this transparency report every 6 months.
 
 <br />Emerald Onion is being prevented from disclosing information.
