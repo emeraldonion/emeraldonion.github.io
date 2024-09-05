@@ -4,8 +4,99 @@
 	<subtitle>Building public-use privacy infrastructure centered on human rights since 2017.</subtitle>
 	<link href="https://emeraldonion.org/feed.xml" rel="self" type="application/atom+xml"/>
     <link href="https://emeraldonion.org"/>
-	<updated>2017-08-13T00:00:00+00:00</updated>
+	<updated>2024-09-05T00:00:00+00:00</updated>
 	<id>https://emeraldonion.org/feed.xml</id>
+	<entry xml:lang="en">
+		<title>Starting a Human Rights ISP</title>
+		<published>2024-09-05T00:00:00+00:00</published>
+		<updated>2024-09-05T00:00:00+00:00</updated>
+		<link href="https://emeraldonion.org/blog/starting-a-human-rights-isp/" type="text/html"/>
+		<id>https://emeraldonion.org/blog/starting-a-human-rights-isp/</id>
+		<content type="html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;a class=&quot;zola-anchor&quot; href=&quot;#introduction&quot; aria-label=&quot;Anchor link for: introduction&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;p&gt;This article was originally published on emeraldonion.org in 2017 and has been revamped in 2024. In 2018, yawnbox &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=cs6a1i4Owic&quot;&gt;spoke at DEF CON 26&lt;&#x2F;a&gt; (YouTube link) about creating Emerald Onion. To date, we are aware of at least four human rights ISPs that have formed in part because of Emerald Onion&#x27;s example.&lt;&#x2F;p&gt;
+&lt;p&gt;Part of Emerald Onion’s mission is to share our actions in detail in order to help educate others who wish to create their own human-rights focused transit internet service provider. We have a vision that entails many trusted nonprofits setting up and operating long-term, stable, and fast Tor routing operations. Below you will find a high level overview of tasks that we needed to complete in order to create Emerald Onion. As we develop, we will publish greater detail behind each action by linking to a related blog post or external resource.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Invite meaningful and trusted people for the board of directors, executive leadership, and advisory board.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a mission and vision statements, and organizational goals.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Setup a password manager on a secured workstation for generating and documenting organizational passwords.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Purchase a domain name, setup the website, and setup social media accounts.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Setup Microsoft hosted email service for Admin@ and Abuse@. Once you become a 501(c)3, Microsoft provides free enterprise services.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Setup a UPS Store mailbox for registration (your primary “place of business” address) and find Registered Agent services for your registered agent (a legitimate Registered Agent is required).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Apply for Washington State nonprofit status.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Begin contacting local data center service providers who will help by reducing costs for nonprofits.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Apply for Employer Identification Number (EIN&#x2F;TIN) from IRS, even without paid employees.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Apply for a business bank account with a local nonprofit credit union and obtain debit cards.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Apply for 501(c)3 status using the 1023-EZ (See our 1023-EZ).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Once your Charity status has been granted by the IRS, sign up the org for PayPal’s Nonprofit services, Google One Today, and Amazon Smile as funding streams.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Apply for a Tor Servers grant, if available.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Setup a phone call with chosen legal representation to discuss optional support then request a “Form Engagement Letter” from legal representation, if needed.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Request a quote to create a general legal FAQ and abuse response templates for managing complaints from our upstream ISP and direct complaints.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Deposit enough funds for the first two months of  insurance, the first two months of data center service, legal service costs, all RIR registration and IP allocation costs, and all hardware costs.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Purchase computer parts for a Tor router and edge router.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Setup a Zendesk free trial for testing, tracking, and responding to Abuse@ communications, and set up automated responses with the Legal FAQ.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Create ARIN POC records for your organization.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Setup insurance provider(s) needed for data center co-location service, including “commercial general liability”, “business property protection”, and “professional liability” insurance.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Finalize negotiating all fees with your data center and IP transit service (ISP) providers and then sign contracts. The transit provider needs to perform an IP SWIP for updating ARIN’s WHOIS.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;After being provided leased IP scopes from your ISP, apply for an AS number. Then apply for your own IPv6 and IPv4 scopes (See our request details).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Publish donation page, legal FAQ, mission, and vision statements on the website.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Deploy the routers in the data center. Only run Tor middle relays until securing and configuring RIR-provisioned IP scopes.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Create an informational letter for explaining the organization, providing contact information, and offer free and personalized education for our ISP and local law enforcement organizations, then submit it to the respective organizations.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Actively publish work performed on social media and the blog.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Internet Exchange Points in the United States</title>
 		<published>2017-08-13T00:00:00+00:00</published>
