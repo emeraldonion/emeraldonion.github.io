@@ -128,7 +128,7 @@
 &lt;li&gt;Example: our &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;emeraldonion&#x2F;emeraldonion.github.io&#x2F;blob&#x2F;master&#x2F;images&#x2F;ARIN-IPv4-Request.png&quot;&gt;IPv4 request&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;deploying&quot;&gt;Deploying&lt;a class=&quot;zola-anchor&quot; href=&quot;#deploying&quot; aria-label=&quot;Anchor link for: deploying&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;ol start=&quot;24&quot;&gt;
+&lt;ol start=&quot;23&quot;&gt;
 &lt;li&gt;
 &lt;p&gt;Publish a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;emeraldonion.org&#x2F;donate&#x2F;&quot;&gt;donation page&lt;&#x2F;a&gt;, legal FAQ, mission, and vision statements on the website.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
@@ -137,7 +137,7 @@
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;2024 note: When configuring operating systems and applications, be sure to minimize or avoid any network logging, and be transparent about that on your published Legal FAQ. Never operate out-of-scope of your Legal FAQ.&lt;&#x2F;p&gt;
-&lt;ol start=&quot;26&quot;&gt;
+&lt;ol start=&quot;25&quot;&gt;
 &lt;li&gt;Actively publish work performed on social media and the blog. We recommend Mastodon!&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 </content>
