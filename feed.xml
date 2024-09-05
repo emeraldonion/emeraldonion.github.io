@@ -32,10 +32,8 @@
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Setup Microsoft hosted email service for admin@ and abuse@ inboxes. Once you become a 501(c)3, Microsoft provides &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.microsoft.com&#x2F;en-us&#x2F;microsoft-365&#x2F;enterprise&#x2F;nonprofit-plans-and-pricing&quot;&gt;free enterprise services&lt;&#x2F;a&gt; for not-for-profits.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
 &lt;p&gt;2024 note: After much research, we found that Google email does not allow domain admins to have access to admin@ and abuse@ email addresses. We presume because Google wants to be able to perform their own conotrols over what comes into these email addresses. It&#x27;s critical for Tor relay operators to have access to these email addresses, and use them to their fullest extent. If you&#x27;re up to the challenge, self-hosted email can work great (with proper SPF, DMARC, DKIM, and DNSSEC&#x2F;DANE configurations) with open source solutions such as &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;mailcow.email&quot;&gt;MailCow&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;ol start=&quot;6&quot;&gt;
+&lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Setup a UPS Store mailbox for registration (your primary “place of business” address) and find Registered Agent services for your registered agent. A legitimate Registered Agent is required in the State of Washington.&lt;&#x2F;p&gt;
 &lt;p&gt;2024 note: Since 2024, and since more than one of our Board of Director members lives abroad, we&#x27;ve since moved to &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.legalzoom.com&#x2F;business&#x2F;business-operations&#x2F;lz-virtual-mail-overview.html&quot;&gt;Legal Zoom&#x27;s mail scanning service&lt;&#x2F;a&gt; so we can be responsive to US government legal demands that get send my mail.&lt;&#x2F;p&gt;
