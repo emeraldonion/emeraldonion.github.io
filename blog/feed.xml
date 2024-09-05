@@ -87,9 +87,9 @@
 &lt;&#x2F;ol&gt;
 &lt;p&gt;2024 note: Paypal has been instrumental for us to receive funding. Both direct from people, but also to fasciliate corporate donations. Paypal waives all fees for 501(c)(3) not-for-profits, meaning we get 100% of a person&#x27;s donation. One weird potentially odd thing about this setup is that Paypal&#x27;s not-for-profit org is the entity that people give a donation to, and that org simply forwards 100% of the donation to Emerald Onion. To donation&#x2F;tax receipts will appear to be Paypal.&lt;&#x2F;p&gt;
 &lt;ol start=&quot;14&quot;&gt;
-&lt;li&gt;Apply for nonprofit startup grant when available.&lt;&#x2F;li&gt;
+&lt;li&gt;Apply for nonprofit startup grants when available.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;p&gt;2024 note: We were very fortunate to be provided a $5,000 startup grant by the then TorServers.net. We would not have been able to launch without this funding.&lt;&#x2F;p&gt;
+&lt;p&gt;2024 note: We were very fortunate to be provided a $5,000 startup grant by the then TorServers.net. We would not have been able to launch without this initial funding.&lt;&#x2F;p&gt;
 &lt;ol start=&quot;15&quot;&gt;
 &lt;li&gt;Setup a phone call with chosen legal representation to discuss optional support. &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.eff.org&#x2F;about&#x2F;contact&quot;&gt;The EFF&lt;&#x2F;a&gt; may be an option. If seeking private practice, request a quote to create a general legal FAQ and abuse response templates for managing complaints from our upstream ISP and direct complaints. Feel free to start with our free &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;emeraldonion.org&#x2F;legal&#x2F;&quot;&gt;Legal FAQ&lt;&#x2F;a&gt;. If needing paid legal support, request a “Form Engagement Letter” from legal representation.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
@@ -110,10 +110,14 @@
 &lt;&#x2F;ol&gt;
 &lt;p&gt;2024 note: When setting up POC records, be very sure to use the businesses&#x27;s receiving&#x2F;forwarding mail service address. We did not use our Registered Agent address with our POC records since we want to minimize who has access to government legal demands.&lt;&#x2F;p&gt;
 &lt;ol start=&quot;20&quot;&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.arin.net&#x2F;resources&#x2F;guide&#x2F;request&#x2F;&quot;&gt;Apply to ARIN&lt;&#x2F;a&gt; (or your RIR) for your organization&#x27;s Autonomous Systems Number (ASN) and then an &#x2F;48 or &#x2F;32 IPv6 block. It&#x27;s important to get IP space in this order. Understand &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.arin.net&#x2F;participate&#x2F;policy&#x2F;nrpm&#x2F;#4-10-dedicated-ipv4-allocation-to-facilitate-ipv6-deployment&quot;&gt;ARIN&#x27;s 4.10 rule&lt;&#x2F;a&gt; for obtaining a free &#x2F;24 IPv4 block. Once you have obtained an ASN and IPv6 block, apply for a free &#x2F;24 IPv4 block using ARIN&#x27;s 4.10 rule.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;2024 note: Emerald Onion pays an annual fee of $250 for our ASN and $250 for our &#x2F;48 IPv6 block. Back in 2017, we applied for our first 4.10 IPv4 block with success by explaining how Tor needs more IPv6 relays in order to eventually allow IPv6-only relays. So in order to facilitate more IPv6 in the Tor network, operators such as Emerald Onion needs &quot;immediate&quot; access to IPv4 block. A few years later, since Emerald Onion now has multiple POPs, we successfully obtained a second &#x2F;24 IPv4 block using the same 4.10 rule. So, our IPv4 blocks are free and perpetual.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;21&quot;&gt;
 &lt;li&gt;Setup insurance provider(s) needed for data center co-location service, including “commercial general liability”, “business property protection”, and “professional liability” insurance.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;2024 note: We use &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.thehartford.com&#x2F;business-insurance-landing-page&quot;&gt;The Hardtford&lt;&#x2F;a&gt;, and have since day one.&lt;&#x2F;p&gt;
-&lt;ol start=&quot;21&quot;&gt;
+&lt;ol start=&quot;22&quot;&gt;
 &lt;li&gt;
 &lt;p&gt;Finalize negotiating all fees with your data center and IP transit service (upstream ISP) providers and then sign contracts. The transit provider needs to perform an IP SWIP for updating ARIN’s WHOIS.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
@@ -122,7 +126,7 @@
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h2 id=&quot;deploying&quot;&gt;Deploying&lt;a class=&quot;zola-anchor&quot; href=&quot;#deploying&quot; aria-label=&quot;Anchor link for: deploying&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;ol start=&quot;23&quot;&gt;
+&lt;ol start=&quot;24&quot;&gt;
 &lt;li&gt;
 &lt;p&gt;Publish a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;emeraldonion.org&#x2F;donate&#x2F;&quot;&gt;donation page&lt;&#x2F;a&gt;, legal FAQ, mission, and vision statements on the website.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
@@ -131,7 +135,7 @@
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;2024 note: When configuring operating systems and applications, be sure to minimize or avoid any network logging, and be transparent about that on your published Legal FAQ. Never operate out-of-scope of your Legal FAQ.&lt;&#x2F;p&gt;
-&lt;ol start=&quot;25&quot;&gt;
+&lt;ol start=&quot;26&quot;&gt;
 &lt;li&gt;Actively publish work performed on social media and the blog. We recommend Mastodon!&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 </content>
