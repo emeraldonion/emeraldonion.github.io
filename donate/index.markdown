@@ -13,25 +13,27 @@ This is our preferred method because we receive 100% of the donated amount (no f
 # Cash, Check, or Money Order
 
 <address>Emerald Onion
-<br />1425 Broadway # 454
-<br />Seattle, WA 98122-3854
-<br />United States</address>
+<br />600 1st Ave Ste 330
+<br />PMB 279488
+<br />Seattle, WA, 98104-2246
+<br />United States
+</address>
 
 # Cryptocurrency
 
 If a currency is not listed, please contact us to coordinate, via Signal or email.
 
-* Offline ZEC wallet: t1JShsaJADLKHkcK8Yv9tTE1zPUiQJ4DoQr
+- Offline ZEC wallet: t1JShsaJADLKHkcK8Yv9tTE1zPUiQJ4DoQr
 
-* Offline DASH wallet: XsVJRTgs4ixfaXJTSFUFBkdmHkXHqVKPJt
+- Offline DASH wallet: XsVJRTgs4ixfaXJTSFUFBkdmHkXHqVKPJt
 
-* Offline BTC wallet: 132aMUvqkfo2hHwHjAaqRdnMzw7wuD3KYd
+- Offline BTC wallet: 132aMUvqkfo2hHwHjAaqRdnMzw7wuD3KYd
 
-* Offline ETH wallet: 0x7f91d1C105DD0cAbD6Bb41dBBb7980Cb2980f954
+- Offline ETH wallet: 0x7f91d1C105DD0cAbD6Bb41dBBb7980Cb2980f954
 
-* Offline XLR wallet: GDBX3HZN6FIR6TN7OOJXC6LBGZ7KLFSSV7QMWEDYJONPXPP3AEUGINDY
+- Offline XLR wallet: GDBX3HZN6FIR6TN7OOJXC6LBGZ7KLFSSV7QMWEDYJONPXPP3AEUGINDY
 
-* Coinbase: <a href="https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada" target="_blank">https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada</a>
+- Coinbase: <a href="https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada" target="_blank">https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada</a>
 
 # Benevity
 
