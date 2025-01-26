@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang=en>
+<html lang="en">
 
 <head>
-    <meta charset=utf-8>
-    <meta content="width=device-width,initial-scale=1.0" name=viewport>
-    <meta content="light dark" name=color-scheme>
-    <meta content="Donate to Emerald Onion" name=description>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <meta content="light dark" name="color-scheme">
+    <meta content="Donate to Emerald Onion" name="description">
     <title>Donate</title>
-    <link href=/img/favicon-32x32.png rel=icon sizes=32x32 type=image/png>
-    <link href=/img/favicon-16x16.png rel=icon sizes=16x16 type=image/png>
-    <link href=/img/apple-touch-icon.png rel=apple-touch-icon sizes=180x180>
+    <link href="/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="/img/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
     <style>
         body {
             --primary-color: #3f8f68;
@@ -58,94 +58,103 @@
             margin-right: 10px
         }
     </style>
-    <link href=/main.css rel=stylesheet>
-    <link href=/hl-light.css id=hl rel=stylesheet>
+    <link href="/main.css" rel="stylesheet">
+    <link href="/hl-light.css" id="hl" rel="stylesheet">
+</head>
 
-<body class=prose-page>
-    <script>if (localStorage.getItem(`theme`) == `dark`) { document.body.classList.add(`dark`); const a = document.querySelector(`link#hl`); if (a) a.href = `/hl-dark.css` }</script>
-    <header class=blur>
-        <div id=header-wrapper>
-            <nav><a href= /></a><span class="wrap left fold">{</span><a href= />Home</a><span
-                    class="wrap-separator fold">,</span><a href=/about>About</a><span
-                    class="wrap-separator fold">,</span><a href=/history>History</a><span
-                    class="wrap-separator fold">,</span><a href=/legal>Legal</a><span
-                    class="wrap-separator fold">,</span><a href=/transparency>Transparency</a><span
-                    class="wrap-separator fold">,</span><a href=/bridges>Bridges</a><span
-                    class="wrap-separator fold">,</span><a href=/donate>Donate</a><span
-                    class="wrap-separator fold">,</span><a href=/peering>Peering</a><span
-                    class="wrap-separator fold">,</span><a href=/blog>Blog</a><span class="wrap right fold">} ;</span>
+<body class="prose-page">
+    <script>if (localStorage.getItem("theme") == "dark") { document.body.classList.add("dark"); const a = document.querySelector("link#hl"); if (a) a.href = "/hl-dark.css" }</script>
+    <header class="blur">
+        <div id="header-wrapper">
+            <nav><a href="/" /></a><span class="wrap left fold">{</span><a href="/" />Home</a><span
+                    class="wrap-separator fold">,</span><a href="/about">About</a><span
+                    class="wrap-separator fold">,</span><a href="/history">History</a><span
+                    class="wrap-separator fold">,</span><a href="/legal">Legal</a><span
+                    class="wrap-separator fold">,</span><a href="/transparency">Transparency</a><span
+                    class="wrap-separator fold">,</span><a href="/bridges">Bridges</a><span
+                    class="wrap-separator fold">,</span><a href="/donate">Donate</a><span
+                    class="wrap-separator fold">,</span><a href="/peering">Peering</a><span
+                    class="wrap-separator fold">,</span><a href="/blog">Blog</a><span class="wrap right fold">} ;</span>
             </nav>
-            <div id=btns><button aria-label="theme switch"
+            <div id="btns"><button aria-label="theme switch"
                     data-moon-icon='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z" fill="currentColor"></path></svg>'
                     data-sun-icon='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z" fill="currentColor"></path></svg>'
-                    id=theme-toggle><svg viewbox="0 0 24 24" height=24 width=24 xmlns=http://www.w3.org/2000/svg>
+                    id="theme-toggle"><svg viewBox="0 0 24 24" height="24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z"
-                            fill=currentColor></path>
+                            fill="currentColor"></path>
                     </svg></button></div>
         </div>
     </header>
-    <div id=wrapper>
+    <div id="wrapper">
         <main>
             <div>
                 <div data-check-icon='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z" fill="currentColor"></path></svg>'
                     data-copy-icon='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z" fill="currentColor"></path></svg>'
-                    id=copy-cfg style=display:none></div>
+                    id="copy-cfg" style="display:none"></div>
                 <article
                     data-backlink-icon='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M9.41421 8L18.0208 16.6066L16.6066 18.0208L8 9.41421V17H6V6H17V8H9.41421Z" fill="currentColor"></path></svg>'
-                    class=prose>
-                    <h1 id=donate>Donate</h1>
+                    class="prose">
+                    <h1 id="donate">Donate</h1>
                     <p>Emerald Onion would not exist without the generosity of people, including the people behind
                         Emerald Onion who are all volunteers. Grants and donations make up 100% of our income, and we
                         would sincerely welcome your help. Being a U.S. tax-deductible nonprofit, we depend on grants
-                        and donations for deploying and maintaining privacy infrastructure.
+                        and donations for deploying and maintaining privacy infrastructure.</p>
                     <p>If you are interested in donating time or IPv4 space, or volunteering, please contact us via <a
-                            rel="noopener nofollow noreferrer" href=https://signal.me/#p/+12067393390
-                            target=_blank>Signal</a>, <a rel="noopener nofollow noreferrer"
-                            href=https://digitalcourage.social/@EmeraldOnion target=_blank>Mastodon</a> or <a
-                            href=mailto:donations@emeraldonion.org>email</a> with questions.
+                            rel="noopener nofollow noreferrer" href="https://signal.me/#p/+12067393390"
+                            target="_blank">Signal</a>, <a rel="noopener nofollow noreferrer"
+                            href="https://digitalcourage.social/@EmeraldOnion" target="_blank">Mastodon</a> or <a
+                            href="mailto:donations@emeraldonion.org">email</a> with questions.</p>
                     <p>Emerald Onion is a U.S. 501(c)(3) nonprofit, tax ID #82-2009438. Contributions are tax deductible
-                        as allowed by law. Thank you!
-                    <h2 id=paypal-giving-fund>PayPal Giving Fund</h2>
+                        as allowed by law. Thank you!</p>
+                    <h2 id="paypal-giving-fund">PayPal Giving Fund</h2>
                     <p>This is our preferred method because we receive 100% of the donated amount (no fees!) <a
-                            rel="noopener nofollow noreferrer" href=https://www.paypal.com/us/fundraiser/charity/2819730
-                            target=_blank>https://www.paypal.com/us/fundraiser/charity/2819730</a>
-                    <h2 id=cash-check-or-money-order>Cash, Check, or Money Order</h2>
-                    <p>Emerald Onion<br> 113 Cherry St # 279488<br> Seattle, WA 98104-2205<br> United States
-                    <h2 id=github-sponsors>Github Sponsors</h2>
-                    <p><a rel="noopener nofollow noreferrer" href=https://github.com/sponsors/emeraldonion
-                            target=_blank>https://github.com/sponsors/emeraldonion</a>
-                    <h2 id=benevity>Benevity</h2>
+                            rel="noopener nofollow noreferrer"
+                            href="https://www.paypal.com/us/fundraiser/charity/2819730"
+                            target="_blank">https://www.paypal.com/us/fundraiser/charity/2819730</a></p>
+
+                    <h2 id="cash-check-or-money-order">Cash, Check, or Money Order</h2>
+
+                    <p>Emerald Onion<br> 600 1st Ave Ste 330<br> PMB 279488<br> Seattle, WA 98104-2246<br> United States
+                    </p>
+
+                    <h2 id="github-sponsors">Github Sponsors</h2>
+                    <p><a rel="noopener nofollow noreferrer" href="https://github.com/sponsors/emeraldonion"
+                            target="_blank">https://github.com/sponsors/emeraldonion</a></p>
+                    <h2 id="benevity">Benevity</h2>
                     <p>Your company might match donations (like if you work for Apple, Google, or Microsoft)! <a
-                            rel="noopener nofollow noreferrer" href=https://causes.benevity.org/causes/840-822009438
-                            target=_blank>https://causes.benevity.org/causes/840-822009438</a>
-                    <h2 id=teespring>Teespring</h2>
-                    <p><a rel="noopener nofollow noreferrer" href=https://teespring.com/emerald-onion
-                            target=_blank>https://teespring.com/emerald-onion</a>
-                    <h2 id=cryptocurrency>Cryptocurrency</h2>
-                    <p>If a currency is not listed, please contact us to coordinate, via Signal or email.
+                            rel="noopener nofollow noreferrer" href="https://causes.benevity.org/causes/840-822009438"
+                            target="_blank">https://causes.benevity.org/causes/840-822009438</a></p>
+                    <h2 id="cryptocurrency">Cryptocurrency</h2>
+                    <p>If a currency is not listed, please contact us to coordinate, via Signal or email.</p>
                     <ul>
-                        <li>ZEC: t1JShsaJADLKHkcK8Yv9tTE1zPUiQJ4DoQr
-                        <li>DASH: XsVJRTgs4ixfaXJTSFUFBkdmHkXHqVKPJt
-                        <li>BTC: 132aMUvqkfo2hHwHjAaqRdnMzw7wuD3KYd
-                        <li>ETH: 0x7f91d1C105DD0cAbD6Bb41dBBb7980Cb2980f954
-                        <li>XLR: GDBX3HZN6FIR6TN7OOJXC6LBGZ7KLFSSV7QMWEDYJONPXPP3AEUGINDY
+                        <li>ZEC: t1JShsaJADLKHkcK8Yv9tTE1zPUiQJ4DoQr</li>
+                        <li>DASH: XsVJRTgs4ixfaXJTSFUFBkdmHkXHqVKPJt</li>
+                        <li>BTC: 132aMUvqkfo2hHwHjAaqRdnMzw7wuD3KYd</li>
+                        <li>ETH: 0x7f91d1C105DD0cAbD6Bb41dBBb7980Cb2980f954</li>
+                        <li>XLR: GDBX3HZN6FIR6TN7OOJXC6LBGZ7KLFSSV7QMWEDYJONPXPP3AEUGINDY</li>
                         <li>Coinbase: <a rel="noopener nofollow noreferrer"
-                                href=https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada
-                                target=_blank>https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada</a>
+                                href="https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada"
+                                target="_blank">https://commerce.coinbase.com/checkout/21a685fb-7e6b-4cca-827d-f2aaf5890ada</a>
+                        </li>
                     </ul>
                 </article>
             </div>
             <footer>
-                <div class=copyright>
+                <div class="copyright">
                     <p>emeraldonion.org is released into the public domain under the <a rel="noreferrer noopener"
-                            href=https://creativecommons.org/publicdomain/zero/1.0/ target=_blank>CC0 1.0 Universal</a>.
+                            href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0
+                            Universal</a>.
                 </div>
-                <div class=credits>powered by <a rel="noreferrer noopener" href=https://www.getzola.org
-                        target=_blank>zola</a> and <a rel="noreferrer noopener" href=https://github.com/isunjn/serene
-                        target=_blank>serene</a></div>
+                <div class="credits">powered by <a rel="noreferrer noopener" href="https://www.getzola.org"
+                        target="_blank">zola</a> and <a rel="noreferrer noopener"
+                        href="https://github.com/isunjn/serene" target="_blank">serene</a></div>
             </footer>
         </main>
     </div>
-    <script src=/js/lightense.min.js></script>
-    <script src=/js/main.js></script>
+    <script src="/js/lightense.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
