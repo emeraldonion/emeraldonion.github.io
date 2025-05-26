@@ -42,9 +42,9 @@ One-time donation options: XX
 
 ## General Business Administration
 
-Emerald Onion owns and operates one ASN and four IP scopes (500 USD /yr), maintains Washington state registration (50 USD /yr), Washington state registered agent services (200 USD /yr), and physical mailbox services (480 USD /yr).
+Emerald Onion owns and operates one ASN and four IP scopes (525 USD /yr), maintains Washington state registration (50 USD /yr), Washington state registered agent services (200 USD /yr), and physical mailbox services (480 USD /yr).
 
-Annual donation goal progress: 1,230 USD/EUR [-----%-----]
+Annual donation goal progress: 1,255 USD/EUR [-----%-----]
 
 Monthly donation options: XX
 One-time donation options: XX
