@@ -1,6 +1,6 @@
 # Emerald Onion Project Funding
 
-Emerald Onion is 100% donation-based and 100% volunteer-run. We are a U.S. 501(c)(3) nonprofit, tax ID #82-2009438. Contributions are tax deductible as allowed by law. Please see https://emeraldonion.org/donate/ for more details!
+Emerald Onion is 100% volunteer-run and 100% donation-based. We are a U.S. 501(c)(3) nonprofit, tax ID #82-2009438. Contributions are tax deductible as allowed by law. Please see https://emeraldonion.org/donate/ for more details!
 
 ## Tor in San Francisco, California
 
