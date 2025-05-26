@@ -4,7 +4,7 @@ Emerald Onion is 100% donation-based and 100% volunteer-run. We are a U.S. 501(c
 
 ## Tor in San Francisco, California
 
-460 USD per month for 10 Gbps unmetered bandwith in Fremont, California, United States for running unfiltered Tor exit relays, Tor bridges, and Signal proxies on self-hosted bare-metal servers. Self-managed IP scopes under our AS, 396507.
+460 USD per month for 10 Gbps unmetered bandwith in Fremont, California, United States for running unfiltered Tor exit relays running HardenedBSD, Tor bridges, and Signal proxies on self-hosted bare-metal servers. Self-managed IP scopes under our AS, 396507.
 
 Annual donation goal progress: 5,520 USD [-----%-----]
 
@@ -13,14 +13,14 @@ One-time donation options: XX
 
 ## Fediverse in Amsterdam, Netherlands
 
-300 EUR per month for co-location in Amsterdam, Netherlands for running an invite-only Mastodon server, invite-only Pixelfed server, an open ActivityPub relay, and Tor WebTunnel bridges installed on these services on self-hosted bare-metal servers. Self-managed IP scopes under our AS, 396507.
+300 EUR per month for co-location in Amsterdam, Netherlands for running an invite-only Mastodon server for friends of Emerald Onion, an open ActivityPub relay, and Tor WebTunnel bridges all on self-hosted bare-metal servers. Self-managed IP scopes under our AS, 396507.
 
 Annual donation goal progress: 3,600 USD/EUR [-----%-----]
 
 Monthly donation options: XX
 One-time donation options: XX
 
-disobey.net is Emerald Onion's Matodon instance created for supporters of public-use privacy infrastructure. If you have ever been, or want to become a donor to Emerald Onion, we can happily extend an invite to you for disobey.net. Donating to Emerald Onion sustains permanent Tor and fediverse operations.
+disobey.net is Emerald Onion's Mastodon instance. If you have ever been, or want to become a donor to Emerald Onion, we can happily extend an invite to you for disobey.net. Donating to Emerald Onion sustains permanent Tor and fediverse operations.
 
 ## IPFS in Berlin, Germany
 
