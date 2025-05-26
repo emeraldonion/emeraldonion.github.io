@@ -2,7 +2,7 @@
 
 Emerald Onion is 100% donation-based and 100% volunteer-run. We are a U.S. 501(c)(3) nonprofit, tax ID #82-2009438. Contributions are tax deductible as allowed by law. Please see https://emeraldonion.org/donate/ for more details!
 
-## Tor in California
+## Tor in San Francisco, California
 
 460 USD per month for 10 Gbps unmetered bandwith in Fremont, California, United States for running unfiltered Tor exit relays, Tor bridges, and Signal proxies on self-hosted bare-metal servers. Self-managed IP scopes under our AS, 396507.
 
@@ -11,7 +11,7 @@ Annual donation goal progress: 5,520 USD [-----%-----]
 Monthly donation options: XX
 One-time donation options: XX
 
-## Fediverse in Amsterdam
+## Fediverse in Amsterdam, Netherlands
 
 300 EUR per month for co-location in Amsterdam, Netherlands for running an invite-only Mastodon server, invite-only Pixelfed server, an open ActivityPub relay, and Tor WebTunnel bridges installed on these services on self-hosted bare-metal servers. Self-managed IP scopes under our AS, 396507.
 
@@ -22,7 +22,7 @@ One-time donation options: XX
 
 disobey.net is Emerald Onion's Matodon instance created for supporters of public-use privacy infrastructure. If you have ever been, or want to become a donor to Emerald Onion, we can happily extend an invite to you for disobey.net. Donating to Emerald Onion sustains permanent Tor and fediverse operations.
 
-## IPFS in Berlin
+## IPFS in Berlin, Germany
 
 300 EUR per month for co-location in Berlin, Germany for running IPFS supernodes. Self-managed IP scopes under our AS, 396507.
 
