@@ -15,7 +15,7 @@ One-time donation options: XX
 
 300 EUR per month for co-location in Amsterdam, Netherlands for running an invite-only Mastodon server for friends of Emerald Onion, an open ActivityPub relay, and Tor WebTunnel bridges all on self-hosted bare-metal servers. Self-managed IP scopes under our AS, 396507.
 
-Annual donation goal progress: 3,600 USD/EUR [-----%-----]
+Annual donation goal progress: 3,600 EUR [-----%-----]
 
 Monthly donation options: XX
 One-time donation options: XX
@@ -26,7 +26,7 @@ disobey.net is Emerald Onion's Mastodon instance. If you have ever been, or want
 
 300 EUR per month for co-location in Berlin, Germany for running IPFS supernodes. Self-managed IP scopes under our AS, 396507.
 
-Annual donation goal progress: 3,600 USD/EUR [100%]
+Annual donation goal progress: 3,600 EUR [100%]
 
 Monthly donation options: XX
 One-time donation options: XX
@@ -44,7 +44,7 @@ One-time donation options: XX
 
 Emerald Onion owns and operates one ASN and four IP scopes (525 USD /yr), maintains Washington state registration (50 USD /yr), Washington state registered agent services (200 USD /yr), and physical mailbox services (480 USD /yr).
 
-Annual donation goal progress: 1,255 USD/EUR [-----%-----]
+Annual donation goal progress: 1,255 USD [-----%-----]
 
 Monthly donation options: XX
 One-time donation options: XX
