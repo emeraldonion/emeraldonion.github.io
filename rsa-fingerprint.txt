@@ -1,3 +1,7 @@
+---
+layout: none
+permalink: .well-known/tor-relay/rsa-fingerprint.txt
+---
 06f0bb4cdf4d75e5e8265a6270c10d2fdfe64aaa
 14e346846c87a8844d5a2e7c17855a891aa6d7fb
 186f046d8895e13626b363b879bd15f38a52c6bc
