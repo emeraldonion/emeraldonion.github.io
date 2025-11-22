@@ -1,3 +1,7 @@
+---
+layout: none
+permalink: .well-known/tor-relay/ed25519-master-pubkey.txt
+---
 05dnG0qcH3VhEHEVt6wiGjx47sGws3jMYJJ7pa6MEw8
 0PaO6sNu4C3kov38VjfaRyiNkA8SC7AkTTPsaIh4z+Y
 1+rbh7A1EOp8VPl6m1J/rVJ4WnqFN2nfCWnuz7UHhxk
