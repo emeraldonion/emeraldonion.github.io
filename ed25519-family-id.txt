@@ -1,5 +1,5 @@
 ---
 layout: none
-permalink: .well-known/tor-relay/ed25519-master-pubkey.txt
+permalink: .well-known/tor-relay/ed25519-family-id.txt
 ---
 i2Dfzk60I2eG99oK/ooKG5q6CrxfWtQ/GzQ2IfdrEo4
